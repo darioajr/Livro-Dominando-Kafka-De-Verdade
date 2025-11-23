@@ -1,0 +1,220 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="Kafka vs Fila Tradicional" id="kafka-vs-queue-diagram">
+    <mxGraphModel dx="1477" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;Kafka vs Fila de Mensagens Tradicional&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="125" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Comparação: Persistência vs Volatilidade" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="225" y="70" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="120" as="sourcePoint" />
+            <mxPoint x="830" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="queue-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;FILA DE MENSAGENS TRADICIONAL&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="150" y="140" width="550" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="queue-subtitle" value="(RabbitMQ, ActiveMQ, AWS SQS)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="275" y="175" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-producer" value="&lt;b&gt;PRODUCER&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="90" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-trad-p-q" value="&lt;b&gt;Envia&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="trad-producer" target="trad-queue" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="250" as="sourcePoint" />
+            <mxPoint x="280" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="trad-queue" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
+          <mxGeometry x="280" y="200" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-queue-label" value="&lt;b&gt;FILA (Memória)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="340" y="210" width="170" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-msg1" value="M1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="300" y="245" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-msg2" value="M2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="365" y="245" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-msg3" value="M3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="430" y="245" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-msg4" value="M4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="495" y="245" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-trad-q-c" value="&lt;b&gt;Consome e Remove&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="trad-queue" target="trad-consumer" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="250" as="sourcePoint" />
+            <mxPoint x="630" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="trad-consumer" value="&lt;b&gt;CONSUMER&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="700" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-features-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="340" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-features-title" value="&lt;b&gt;CARACTERÍSTICAS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="325" y="350" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-feat1" value="✗ &lt;b&gt;VOLÁTIL:&lt;/b&gt; Mensagem é removida após consumo" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="385" width="590" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-feat2" value="✗ &lt;b&gt;SEM REPROCESSAMENTO:&lt;/b&gt; Impossível reler mensagens antigas" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="415" width="590" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-feat3" value="✗ &lt;b&gt;ÚNICO CONSUMIDOR:&lt;/b&gt; Apenas um consumer recebe cada mensagem" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="445" width="590" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-feat4" value="✗ &lt;b&gt;PERDA DE DADOS:&lt;/b&gt; Se consumer falhar, mensagem pode ser perdida" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="475" width="590" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-volatile-label" value="&lt;b&gt;Fluxo de Consumo:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="130" y="535" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-before" value="M1  M2  M3  M4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="130" y="560" width="200" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-arrow-consume" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="577" as="sourcePoint" />
+            <mxPoint x="410" y="577" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="trad-consume-text" value="Consome M1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="340" y="550" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-after" value="M2  M3  M4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="430" y="560" width="200" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="trad-removed" value="&lt;b&gt;M1 REMOVIDA!&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="450" y="600" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="divider2" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=3;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="660" as="sourcePoint" />
+            <mxPoint x="830" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kafka-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;APACHE KAFKA&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="275" y="690" width="300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-subtitle" value="(Event Streaming Platform)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="300" y="725" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-producer" value="&lt;b&gt;PRODUCER&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="86" y="754" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-p-t" value="&lt;b&gt;Publica&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="kafka-producer" target="kafka-topic" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="800" as="sourcePoint" />
+            <mxPoint x="280" y="785" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kafka-topic" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="280" y="750" width="290" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-topic-label" value="&lt;b&gt;TÓPICO (Disco Persistente)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="315" y="760" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-partition0" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="300" y="795" width="250" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-p0-label" value="&lt;b&gt;Partition 0:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="305" y="800" width="70" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-p0-m1" value="M1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="380" y="800" width="35" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-p0-m2" value="M2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="420" y="800" width="35" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-p0-m3" value="M3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="460" y="800" width="35" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-p0-m4" value="M4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="500" y="800" width="35" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-partition1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="300" y="840" width="250" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-p1-label" value="&lt;b&gt;Partition 1:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="305" y="845" width="70" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-p1-m5" value="M5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="380" y="845" width="35" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-p1-m6" value="M6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="420" y="845" width="35" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-p1-m7" value="M7" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="460" y="845" width="35" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-t-c" value="&lt;b&gt;Lê (mantém dados)&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="kafka-topic" target="kafka-consumer" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="855" as="sourcePoint" />
+            <mxPoint x="630" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kafka-consumer" value="&lt;b&gt;CONSUMER&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="701" y="825" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-features-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="930" width="650" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-features-title" value="&lt;b&gt;CARACTERÍSTICAS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="325" y="940" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-feat1" value="✓ &lt;b&gt;PERSISTENTE:&lt;/b&gt; Mensagens ficam armazenadas no disco por tempo configurável" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="975" width="590" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-feat2" value="✓ &lt;b&gt;REPROCESSAMENTO:&lt;/b&gt; Consumers podem reler mensagens antigas (replay)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1005" width="590" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-feat3" value="✓ &lt;b&gt;MÚLTIPLOS CONSUMIDORES:&lt;/b&gt; Vários consumers podem ler as mesmas mensagens" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1035" width="590" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-feat4" value="✓ &lt;b&gt;DURABILIDADE:&lt;/b&gt; Dados replicados em múltiplos brokers para alta disponibilidade" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1065" width="590" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-feat5" value="✓ &lt;b&gt;ESCALABILIDADE:&lt;/b&gt; Partições permitem processamento paralelo e distribuído" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1095" width="590" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-persist-label" value="&lt;b&gt;Fluxo de Consumo:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="130" y="1155" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-before" value="M1  M2  M3  M4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1180" width="200" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-arrow-consume" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="1197" as="sourcePoint" />
+            <mxPoint x="410" y="1197" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kafka-consume-text" value="Lê M1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="350" y="1170" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-after" value="M1  M2  M3  M4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="430" y="1180" width="200" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-persist" value="&lt;b&gt;M1 PERMANECE!&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="450" y="1220" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1280" width="650" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;RESUMO: KAFKA = PERSISTÊNCIA + REPROCESSAMENTO + ESCALABILIDADE&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1295" width="610" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

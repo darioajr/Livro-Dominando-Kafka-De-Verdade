@@ -1,0 +1,236 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="Banking Orchestration Flow" id="banking-orchestration-diagram">
+    <mxGraphModel dx="783" dy="427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Orquestração: Sistema Bancário&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="30" width="650" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Coordenação Centralizada de Transações Financeiras" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="175" y="70" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="120" as="sourcePoint" />
+            <mxPoint x="780" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="trigger-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="70" y="150" width="710" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="trigger-title" value="&lt;b&gt;EVENTO INICIAL: TRANSFERÊNCIA BANCÁRIA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="165" width="400" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="trigger-event" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="200" y="200" width="450" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="trigger-event-label" value="&lt;b&gt;Cliente solicita transferência:&lt;/b&gt; R$ 1.000,00 da Conta A para Conta B" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="220" y="210" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-trigger-orchestrator" value="&lt;b&gt;Inicia transação&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" parent="1" source="trigger-section" target="orchestrator-section" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orchestrator-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=4;" parent="1" vertex="1">
+          <mxGeometry x="70" y="300" width="710" height="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="orchestrator-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;ORQUESTRADOR DE TRANSAÇÕES&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="320" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="orchestrator-subtitle" value="Controle centralizado do fluxo de execução" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="250" y="350" width="350" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step1-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="400" width="640" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="step1-title" value="&lt;b&gt;PASSO 1: VALIDAÇÃO INICIAL&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="280" y="402" width="290" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step1-content" value="• Verifica saldo suficiente na Conta A (&amp;gt;= R$ 1.000,00)&lt;br&gt;• Valida limites diários e mensais&lt;br&gt;• Confirma conta destino ativa e válida" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="120" y="422" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-step1-decision1" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=3;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.507;exitY=0.997;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="step1-box" target="decision1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="480" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="decision1" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="319" y="510" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="decision1-label" value="&lt;b&gt;Validação&lt;br&gt;OK?&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="350" y="540" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-decision1-no" value="&lt;b&gt;NÃO&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#8B0000;strokeWidth=3;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=11;fontStyle=1;fontColor=#8B0000;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="decision1" edge="1" target="abort-box">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="abort-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="530" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="abort-label" value="&lt;b&gt;ABORTAR&lt;/b&gt;&lt;br&gt;Retorna erro&lt;br&gt;Rollback" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="115" y="538" width="120" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-decision1-yes" value="&lt;b&gt;SIM&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#006400;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.506;entryY=-0.014;entryDx=0;entryDy=0;fontSize=11;fontStyle=1;fontColor=#006400;entryPerimeter=0;" parent="1" source="decision1" target="step2-box" edge="1">
+          <mxGeometry x="-0.4786" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step2-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="100" y="650" width="640" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-title" value="&lt;b&gt;PASSO 2: SERVIÇO DE DÉBITO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="280" y="665" width="290" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-action" value="&lt;b&gt;Orquestrador envia comando:&lt;/b&gt; &quot;Debitar R$ 1.000,00 da Conta A&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="180" y="695" width="490" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="280" y="725" width="290" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-service-label" value="&lt;b&gt;Serviço de Débito&lt;/b&gt; executa transação" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="300" y="733" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-step2-decision2" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=3;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.509;exitY=1.007;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="step2-box" target="decision2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="770" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="decision2" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="321" y="800" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="decision2-label" value="&lt;b&gt;Débito&lt;br&gt;sucesso?&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="350" y="830" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-decision2-no" value="&lt;b&gt;NÃO&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#8B0000;strokeWidth=3;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=11;fontStyle=1;fontColor=#8B0000;entryX=0.985;entryY=0.52;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="decision2" edge="1" target="rollback1-box">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rollback1-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="820" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rollback1-label" value="&lt;b&gt;ROLLBACK&lt;/b&gt;&lt;br&gt;Cancela operação&lt;br&gt;Retorna erro" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="115" y="828" width="120" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-decision2-yes" value="&lt;b&gt;SIM&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#006400;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.509;entryY=-0.002;entryDx=0;entryDy=0;fontSize=11;fontStyle=1;fontColor=#006400;entryPerimeter=0;" parent="1" source="decision2" target="step3-box" edge="1">
+          <mxGeometry x="-0.4969" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step3-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="100" y="940" width="640" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="step3-title" value="&lt;b&gt;PASSO 3: SERVIÇO DE CRÉDITO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="280" y="955" width="290" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="step3-action" value="&lt;b&gt;Orquestrador envia comando:&lt;/b&gt; &quot;Creditar R$ 1.000,00 na Conta B&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="180" y="985" width="490" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step3-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="280" y="1015" width="290" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="step3-service-label" value="&lt;b&gt;Serviço de Crédito&lt;/b&gt; executa transação" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1023" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-step3-decision3" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=3;exitX=0.507;exitY=0.992;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="step3-box" target="decision3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="decision3" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1090" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="decision3-label" value="&lt;b&gt;Crédito&lt;br&gt;sucesso?&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="350" y="1120" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-decision3-no" value="&lt;b&gt;NÃO&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#8B0000;strokeWidth=3;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=11;fontStyle=1;fontColor=#8B0000;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="decision3" edge="1" target="rollback2-box">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rollback2-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1090" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rollback2-label" value="&lt;b&gt;COMPENSAÇÃO&lt;/b&gt;&lt;br&gt;&lt;br&gt;1. Reverte débito&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;(credita Conta A)&lt;br&gt;2. Cancela transação&lt;br&gt;3. Retorna erro" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="110" y="1100" width="130" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-decision3-yes" value="&lt;b&gt;SIM&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#006400;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.508;entryY=-0.002;entryDx=0;entryDy=0;fontSize=11;fontStyle=1;fontColor=#006400;entryPerimeter=0;" parent="1" source="decision3" target="step4-box" edge="1">
+          <mxGeometry x="-0.4977" y="-5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step4-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1230" width="640" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="step4-title" value="&lt;b&gt;PASSO 4: SERVIÇO DE NOTIFICAÇÃO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="280" y="1245" width="290" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="step4-action" value="&lt;b&gt;Orquestrador envia comando:&lt;/b&gt; &quot;Notificar cliente sobre transferência&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="180" y="1275" width="490" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step4-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="280" y="1305" width="290" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="step4-service-label" value="&lt;b&gt;Serviço de Notificação&lt;/b&gt; envia SMS/Email" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1313" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-step4-final" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=3;exitX=0.507;exitY=0.992;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="step4-box" target="final-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="final-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#006400;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="250" y="1390" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="final-title" value="&lt;b&gt;✅ TRANSAÇÃO COMPLETA COM SUCESSO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="270" y="1390" width="310" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="final-summary" value="• Débito realizado na Conta A&lt;br&gt;• Crédito realizado na Conta B&lt;br&gt;• Cliente notificado por SMS e Email" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="280" y="1415" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="control-note" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1500" width="640" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="control-note-title" value="&lt;b&gt;CARACTERÍSTICAS DA ORQUESTRAÇÃO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="270" y="1510" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="control-note-content" value="&lt;b&gt;1. Controle Centralizado:&lt;/b&gt; Orquestrador coordena todos os passos da transação&lt;br&gt;&lt;br&gt;&lt;b&gt;2. Execução Sequencial:&lt;/b&gt; Cada serviço aguarda comando do orquestrador&lt;br&gt;&lt;br&gt;&lt;b&gt;3. Verificação de Condições:&lt;/b&gt; Decisões baseadas em sucesso/falha de cada etapa&lt;br&gt;&lt;br&gt;&lt;b&gt;4. Compensação Automatizada:&lt;/b&gt; Rollback coordenado em caso de falha&lt;br&gt;&lt;br&gt;&lt;b&gt;5. Estado Gerenciado:&lt;/b&gt; Orquestrador mantém estado completo da transação" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1530" width="600" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="comparison-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1740" width="710" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="comparison-title" value="&lt;b&gt;VANTAGENS E DESVANTAGENS DA ORQUESTRAÇÃO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="1755" width="450" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="advantages-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#006400;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="90" y="1795" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="advantages-title" value="&lt;b&gt;✅ VANTAGENS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#006400;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1805" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="advantages-content" value="• &lt;b&gt;Controle total:&lt;/b&gt; Fluxo previsível e fácil de debugar&lt;br&gt;• &lt;b&gt;Consistência:&lt;/b&gt; Transações ACID garantidas&lt;br&gt;• &lt;b&gt;Rollback coordenado:&lt;/b&gt; Compensação clara&lt;br&gt;• &lt;b&gt;Estado centralizado:&lt;/b&gt; Visibilidade total&lt;br&gt;• &lt;b&gt;Ideal para:&lt;/b&gt; Transações complexas e críticas" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="105" y="1825" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="disadvantages-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8B0000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="430" y="1795" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="disadvantages-title" value="&lt;b&gt;⚠️ DESVANTAGENS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#8B0000;" parent="1" vertex="1">
+          <mxGeometry x="460" y="1805" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="disadvantages-content" value="• &lt;b&gt;Ponto único de falha:&lt;/b&gt; Orquestrador crítico&lt;br&gt;• &lt;b&gt;Acoplamento:&lt;/b&gt; Serviços dependem do orquestrador&lt;br&gt;• &lt;b&gt;Escalabilidade limitada:&lt;/b&gt; Gargalo central&lt;br&gt;• &lt;b&gt;Complexidade crescente:&lt;/b&gt; Difícil manter&lt;br&gt;• &lt;b&gt;Latência:&lt;/b&gt; Execução sequencial mais lenta" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="445" y="1825" width="290" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1970" width="710" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;CASOS DE USO IDEAIS PARA ORQUESTRAÇÃO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="1985" width="450" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases-content" value="&lt;b&gt;1. Transações Financeiras:&lt;/b&gt; Transferências, pagamentos, compensações bancárias&lt;br&gt;&lt;b&gt;2. Processos de Aprovação:&lt;/b&gt; Workflows com múltiplas etapas sequenciais e condicionais&lt;br&gt;&lt;b&gt;3. Operações Críticas:&lt;/b&gt; Onde consistência e atomicidade são mandatórias&lt;br&gt;&lt;b&gt;4. Integrações Complexas:&lt;/b&gt; Coordenação entre sistemas legados e modernos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="100" y="2010" width="640" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="💡 &lt;b&gt;NOTA:&lt;/b&gt; A orquestração é ideal quando você precisa de controle total do fluxo e garantias transacionais fortes, mas pode se tornar um gargalo em sistemas de alta escala." style="text;html=1;strokeColor=#000000;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=2;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="2140" width="650" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,202 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="Kafka Event Flow" id="kafka-event-flow-diagram">
+    <mxGraphModel dx="1477" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Usd3fdzfNPMLCJotCNjn-6" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="180" width="180" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Fluxo de Eventos&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Apache Kafka&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="350" y="20" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="producers-label" value="&lt;b&gt;Producers&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="55" y="210" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer1" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Producer 1&lt;/b&gt;&lt;br&gt;Web App&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="40" y="260" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="producer2" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Producer 2&lt;/b&gt;&lt;br&gt;Mobile App&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="40" y="370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="producer3" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Producer 3&lt;/b&gt;&lt;br&gt;IoT Devices&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="40" y="480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-cluster" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#000000,#000000);strokeWidth=3;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="80" width="600" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-cluster-label" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px; color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Kafka Cluster&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#2196F3;" parent="1" vertex="1">
+          <mxGeometry x="450" y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zookeeper" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;ZooKeeper / KRaft&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Coordenação e Metadados&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="280" y="130" width="540" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="brokers-label" value="&lt;b&gt;Brokers&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="490" y="200" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="broker1" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="240" width="160" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="broker1-label" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Broker 1&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="300" y="250" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="broker1-partition1" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Topic A&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Partition 0 (L)&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="295" y="290" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker1-partition2" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Topic B&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Partition 1 (F)&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="295" y="360" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker1-partition3" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Topic C&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Partition 0 (L)&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="295" y="430" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker1-info" value="&lt;font style=&quot;font-size: 9px; color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Replicação&lt;br&gt;Persistência&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="300" y="500" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="broker2" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="470" y="240" width="160" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="broker2-label" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Broker 2&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="490" y="250" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="broker2-partition1" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Topic A&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Partition 1 (L)&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="485" y="290" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker2-partition2" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Topic B&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Partition 0 (L)&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="485" y="360" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker2-partition3" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Topic C&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Partition 1 (F)&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="485" y="430" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker2-info" value="&lt;font style=&quot;font-size: 9px; color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Replicação&lt;br&gt;Persistência&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="490" y="500" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="broker3" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="240" width="160" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="broker3-label" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Broker 3&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="680" y="250" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="broker3-partition1" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Topic A&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Partition 0 (F)&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="675" y="290" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker3-partition2" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Topic B&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Partition 0 (F)&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="675" y="360" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker3-partition3" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Topic C&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Partition 1 (L)&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="675" y="430" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker3-info" value="&lt;font style=&quot;font-size: 9px; color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Replicação&lt;br&gt;Persistência&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="680" y="500" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="consumers-label" value="&lt;b&gt;Consumers&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="50" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-single" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Consumer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Monitoring Service&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="970" y="490" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-c1" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Subscribe&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);strokeWidth=3;fontSize=10;fontColor=#E65100;fillColor=#ffcd28;gradientColor=#ffa500;dashed=1;dashPattern=8 4 1 4;" parent="1" source="kafka-cluster" target="consumer-group1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-c2" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Subscribe&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);strokeWidth=3;fontSize=10;fontColor=#E65100;fillColor=#ffcd28;gradientColor=#ffa500;dashed=1;dashPattern=8 4 1 4;" parent="1" source="kafka-cluster" target="consumer-group2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-zk-b1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);strokeWidth=2;dashed=1;dashPattern=5 5;" parent="1" source="zookeeper" target="broker1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-zk-b2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);strokeWidth=2;dashed=1;dashPattern=5 5;" parent="1" source="zookeeper" target="broker2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-zk-b3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);strokeWidth=2;dashed=1;dashPattern=5 5;" parent="1" source="zookeeper" target="broker3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="700" width="600" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="&lt;b&gt;Legenda&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="475" y="705" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-text1" value="• L = Leader Partition&lt;br&gt;• F = Follower Partition (Réplica)&lt;br&gt;• Cada tópico é dividido em partições" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="270" y="730" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-publish" value="" style="endArrow=classic;html=1;strokeColor=light-dark(#000000,#000000);strokeWidth=3;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="735" as="sourcePoint" />
+            <mxPoint x="560" y="735" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-publish-text" value="Publicação" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="570" y="728" width="70" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-subscribe" value="" style="endArrow=classic;html=1;strokeColor=light-dark(#000000,#000000);strokeWidth=3;dashed=1;dashPattern=8 4 1 4;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="755" as="sourcePoint" />
+            <mxPoint x="560" y="755" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-subscribe-text" value="Consumo" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="570" y="748" width="70" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-coord" value="" style="endArrow=classic;html=1;strokeColor=light-dark(#000000,#000000);strokeWidth=2;dashed=1;dashPattern=5 5;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="777" as="sourcePoint" />
+            <mxPoint x="560" y="777" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-coord-text" value="Coordenação" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="570" y="770" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="&lt;i&gt;Apache Kafka - Event Streaming Platform&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=light-dark(#000000,#000000);" parent="1" vertex="1">
+          <mxGeometry x="350" y="790" width="400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Usd3fdzfNPMLCJotCNjn-10" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Subscribe&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.007;exitY=0.665;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);strokeWidth=3;fontSize=10;fontColor=#E65100;exitPerimeter=0;fillColor=#ffcd28;gradientColor=#ffa500;dashed=1;dashPattern=8 4 1 4;" edge="1" parent="1" source="kafka-cluster" target="consumer-single">
+          <mxGeometry x="-0.0068" relative="1" as="geometry">
+            <mxPoint x="890" y="415" as="sourcePoint" />
+            <mxPoint x="940" y="380" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Usd3fdzfNPMLCJotCNjn-11" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Publish&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#000000);strokeWidth=3;fontSize=10;fontColor=#E65100;entryX=0.007;entryY=0.515;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#d5e8d4;gradientColor=#97d077;" edge="1" parent="1">
+          <mxGeometry x="-0.0654" y="19" relative="1" as="geometry">
+            <mxPoint x="190" y="389" as="sourcePoint" />
+            <mxPoint x="249.20000000000005" y="389" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="235" y="389" />
+              <mxPoint x="235" y="389" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Usd3fdzfNPMLCJotCNjn-13" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="970" y="305" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-group2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=2;dashed=1;dashPattern=5 5;strokeColor=light-dark(#000000,#000000);" parent="Usd3fdzfNPMLCJotCNjn-13" vertex="1">
+          <mxGeometry width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-group2-label" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Consumer Group 2&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#E65100;fontSize=12;" parent="Usd3fdzfNPMLCJotCNjn-13" vertex="1">
+          <mxGeometry x="70" y="10" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer2-1" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Consumer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Email Service&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontSize=11;" parent="Usd3fdzfNPMLCJotCNjn-13" vertex="1">
+          <mxGeometry x="20" y="50" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer2-2" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Consumer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Storage&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontSize=11;" parent="Usd3fdzfNPMLCJotCNjn-13" vertex="1">
+          <mxGeometry x="150" y="50" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Usd3fdzfNPMLCJotCNjn-14" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="970" y="120" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-group1" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;dashed=1;dashPattern=5 5;fillColor=none;strokeColor=light-dark(#000000,#000000);" parent="Usd3fdzfNPMLCJotCNjn-14" vertex="1">
+          <mxGeometry width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-group1-label" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Consumer Group 1&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#E65100;fontSize=12;" parent="Usd3fdzfNPMLCJotCNjn-14" vertex="1">
+          <mxGeometry x="70" y="10" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer1-1" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Consumer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Analytics&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontSize=11;" parent="Usd3fdzfNPMLCJotCNjn-14" vertex="1">
+          <mxGeometry x="20" y="50" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer1-2" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;&lt;b&gt;Consumer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Dashboard&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontSize=11;" parent="Usd3fdzfNPMLCJotCNjn-14" vertex="1">
+          <mxGeometry x="150" y="50" width="110" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

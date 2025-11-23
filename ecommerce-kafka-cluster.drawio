@@ -1,0 +1,352 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Kafka E-commerce Cluster" id="kafka-ecommerce-cluster">
+    <mxGraphModel dx="689" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Cluster Kafka - Sistema E-commerce&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="225" y="40" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Separação de Responsabilidades por Tópico" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="225" y="75" width="400" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-cluster" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;verticalAlign=top;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
+          <mxGeometry x="80" y="130" width="690" height="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-label" value="&lt;b&gt;KAFKA CLUSTER&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="325" y="140" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic1-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="200" width="610" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="topic1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="220" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="topic1-label" value="&lt;b&gt;orders.created&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="310" y="230" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer1" value="&lt;b&gt;PRODUTOR&lt;/b&gt;&lt;br&gt;Order Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="140" y="225" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p1-t1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="producer1" target="topic1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer1-1" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Inventory Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="210" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t1-c1-1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0;entryX=0;entryY=0.5;exitDx=0;exitDy=0;" parent="1" source="topic1-label" target="consumer1-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer1-2" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Payment Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="260" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t1-c1-2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.7;entryX=0;entryY=0.5;" parent="1" source="topic1" target="consumer1-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer1-3" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Analytics Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="310" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t1-c1-3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.981;exitY=0.933;entryX=0;entryY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="topic1" target="consumer1-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="536" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="topic2-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="410" width="610" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="topic2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="430" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="topic2-label" value="&lt;b&gt;payments.processed&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="310" y="440" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer2" value="&lt;b&gt;PRODUTOR&lt;/b&gt;&lt;br&gt;Payment Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="140" y="435" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p2-t2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="producer2" target="topic2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer2-1" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Order Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="420" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t2-c2-1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.986;exitY=0.011;entryX=0;entryY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="topic2-label" target="consumer2-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer2-2" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Notification Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="470" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer2-3" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Invoice Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="520" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="topic3-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="600" width="610" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="topic3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="620" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="topic3-label" value="&lt;b&gt;inventory.updated&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="310" y="630" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer3" value="&lt;b&gt;PRODUTOR&lt;/b&gt;&lt;br&gt;Inventory Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="140" y="625" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p3-t3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="producer3" target="topic3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer3-1" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Product Catalog" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="610" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t3-c3-1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0;entryX=0;entryY=0.5;exitDx=0;exitDy=0;" parent="1" source="topic3-label" target="consumer3-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer3-2" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Search Index" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="660" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="topic4-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="760" width="610" h="130" as="geometry" />
+        </mxCell>
+        <mxCell id="topic4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="780" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="topic4-label" value="&lt;b&gt;shipping.dispatched&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="310" y="790" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer4" value="&lt;b&gt;PRODUTOR&lt;/b&gt;&lt;br&gt;Shipping Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="140" y="785" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p4-t4" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="producer4" target="topic4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer4-1" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Order Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="770" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t4-c4-1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0;entryX=0;entryY=0.5;exitDx=0;exitDy=0;" parent="1" source="topic4-label" target="consumer4-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer4-2" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Tracking Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="820" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="topic5-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="920" width="610" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="topic5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="940" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="topic5-label" value="&lt;b&gt;notifications.email&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="310" y="950" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer5-1" value="&lt;b&gt;PRODUTOR&lt;/b&gt;&lt;br&gt;Order Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="140" y="930" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p5-1-t5" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="producer5-1" target="topic5-label" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="producer5-2" value="&lt;b&gt;PRODUTOR&lt;/b&gt;&lt;br&gt;Payment Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="140" y="975" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p5-2-t5" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.7;" parent="1" source="producer5-2" target="topic5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer5-1" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Email Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="945" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t5-c5-1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="topic5" target="consumer5-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="topic6-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1050" width="610" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="topic6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1070" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="topic6-label" value="&lt;b&gt;customer.events&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1080" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer6" value="&lt;b&gt;PRODUTOR&lt;/b&gt;&lt;br&gt;User Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1075" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p6-t6" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="producer6" target="topic6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer6-1" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Marketing Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1060" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t6-c6-1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0;entryX=0;entryY=0.5;exitDx=0;exitDy=0;" parent="1" source="topic6-label" target="consumer6-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer6-2" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;CRM Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1110" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t6-c6-2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.7;entryX=0;entryY=0.5;" parent="1" source="topic6" target="consumer6-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="topic7-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1210" width="610" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="topic7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1230" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="topic7-label" value="&lt;b&gt;product.reviews&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1240" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer7" value="&lt;b&gt;PRODUTOR&lt;/b&gt;&lt;br&gt;Review Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1235" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p7-t7" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="producer7" target="topic7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer7-1" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Product Catalog" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1220" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t7-c7-1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0;entryX=0;entryY=0.5;exitDx=0;exitDy=0;" parent="1" source="topic7-label" target="consumer7-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer7-2" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Search Index" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1270" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t7-c7-2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.7;entryX=0;entryY=0.5;" parent="1" source="topic7" target="consumer7-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="topic8-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1370" width="610" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="topic8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1390" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="topic8-label" value="&lt;b&gt;fraud.alerts&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1400" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer8" value="&lt;b&gt;PRODUTOR&lt;/b&gt;&lt;br&gt;Fraud Detection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1395" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p8-t8" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="producer8" target="topic8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer8-1" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Security Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1380" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t8-c8-1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.986;exitY=0.011;entryX=0;entryY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="topic8-label" target="consumer8-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumer8-2" value="&lt;b&gt;CONSUMIDOR&lt;/b&gt;&lt;br&gt;Alert Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1430" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-t8-c8-2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.7;entryX=0;entryY=0.5;" parent="1" source="topic8" target="consumer8-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="summary-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1520" width="690" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-title" value="&lt;b&gt;BENEFÍCIOS DA SEPARAÇÃO DE RESPONSABILIDADES&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1525" width="690" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-item1" value="✓ Desacoplamento: Serviços independentes comunicam via eventos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1545" width="300" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-item2" value="✓ Escalabilidade: Cada tópico pode escalar independentemente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1560" width="300" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-item3" value="✓ Flexibilidade: Novos consumidores podem ser adicionados facilmente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="420" y="1545" width="330" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-item4" value="✓ Rastreabilidade: Fluxo de eventos claro através do sistema" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="420" y="1560" width="330" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="RvuossNN5Ssgb-oM3ZGt-1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.7;entryX=0;entryY=0.5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="660" as="sourcePoint" />
+            <mxPoint x="580" y="685" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvuossNN5Ssgb-oM3ZGt-2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.7;entryX=0;entryY=0.5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="820" as="sourcePoint" />
+            <mxPoint x="580" y="845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvuossNN5Ssgb-oM3ZGt-3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.7;entryX=0;entryY=0.5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="470" as="sourcePoint" />
+            <mxPoint x="580" y="495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RvuossNN5Ssgb-oM3ZGt-4" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.974;exitY=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="topic2" target="consumer2-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="477.5" as="sourcePoint" />
+            <mxPoint x="570" y="502.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

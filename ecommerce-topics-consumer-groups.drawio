@@ -1,0 +1,386 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="E-commerce Topics and Consumer Groups" id="ecommerce-diagram">
+    <mxGraphModel dx="2066" dy="1137" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Sistema E-commerce: Event-Driven&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="30" width="650" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Múltiplos Tópicos e Consumer Groups Especializados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="175" y="70" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="120" as="sourcePoint" />
+            <mxPoint x="780" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="producer-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="70" y="150" width="710" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-title" value="&lt;b&gt;PRODUCER: ORDER SERVICE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="275" y="160" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="270" y="200" width="310" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-label" value="&lt;b&gt;ORDER SERVICE&lt;/b&gt;&lt;br&gt;&lt;font&gt;Processa pedidos e publica eventos&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="295" y="215" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-prod-payment" value="&lt;b&gt;PAYMENT_PROCESSED&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="producer-section" target="kafka-section" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="209" y="351" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-prod-inventory" value="&lt;b&gt;INVENTORY_UPDATED&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="producer-section" target="kafka-section" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-prod-notification" value="&lt;b&gt;ORDER_CONFIRMED&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.801;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="producer-section" target="kafka-section" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kafka-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="350" width="710" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;KAFKA CLUSTER&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="275" y="365" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-payment-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="420" width="200" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-payment-title" value="&lt;b&gt;TÓPICO: payments&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="125" y="430" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p0-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="470" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p0-title" value="&lt;b&gt;Partition 0&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="135" y="478" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p0-msg1" value="payment_id: 101&lt;br&gt;status: APPROVED" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="130" y="500" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p0-msg2" value="payment_id: 104&lt;br&gt;status: FAILED" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="130" y="525" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p1-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="565" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p1-title" value="&lt;b&gt;Partition 1&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="135" y="573" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p1-msg1" value="payment_id: 102&lt;br&gt;status: PENDING" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="130" y="595" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p1-msg2" value="payment_id: 105&lt;br&gt;status: APPROVED" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="130" y="620" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p2-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="660" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p2-title" value="&lt;b&gt;Partition 2&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="135" y="668" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p2-msg1" value="payment_id: 103&lt;br&gt;status: APPROVED" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="130" y="690" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-p2-msg2" value="payment_id: 106&lt;br&gt;status: REFUNDED" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="130" y="715" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-inventory-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="325" y="420" width="200" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-inventory-title" value="&lt;b&gt;TÓPICO: inventory&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="350" y="430" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p0-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="345" y="470" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p0-title" value="&lt;b&gt;Partition 0&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="360" y="478" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p0-msg1" value="product_id: 501&lt;br&gt;quantity: -2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="355" y="500" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p0-msg2" value="product_id: 504&lt;br&gt;quantity: -1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="355" y="525" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p1-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="345" y="565" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p1-title" value="&lt;b&gt;Partition 1&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="360" y="573" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p1-msg1" value="product_id: 502&lt;br&gt;quantity: -3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="355" y="595" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p1-msg2" value="product_id: 505&lt;br&gt;quantity: +10" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="355" y="620" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p2-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="345" y="660" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p2-title" value="&lt;b&gt;Partition 2&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="360" y="668" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p2-msg1" value="product_id: 503&lt;br&gt;quantity: -5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="355" y="690" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-p2-msg2" value="product_id: 506&lt;br&gt;quantity: -1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="355" y="715" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-notification-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="550" y="420" width="200" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-notification-title" value="&lt;b&gt;TÓPICO: notifications&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="430" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p0-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="470" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p0-title" value="&lt;b&gt;Partition 0&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="585" y="478" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p0-msg1" value="type: EMAIL&lt;br&gt;to: user@mail.com" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="580" y="500" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p0-msg2" value="type: SMS&lt;br&gt;to: +5511999999" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="580" y="525" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p1-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="565" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p1-title" value="&lt;b&gt;Partition 1&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="585" y="573" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p1-msg1" value="type: PUSH&lt;br&gt;device_id: abc123" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="580" y="595" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p1-msg2" value="type: EMAIL&lt;br&gt;to: admin@shop.com" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="580" y="620" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p2-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="660" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p2-title" value="&lt;b&gt;Partition 2&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="585" y="668" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p2-msg1" value="type: SMS&lt;br&gt;to: +5511888888" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="580" y="690" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="notification-p2-msg2" value="type: PUSH&lt;br&gt;device_id: xyz789" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;align=left;" parent="1" vertex="1">
+          <mxGeometry x="580" y="715" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="consumers-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="850" width="710" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="consumers-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CONSUMER GROUPS&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="275" y="865" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-payment-group" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="topic-payment-box" target="group-payment-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-inventory-group" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="topic-inventory-box" target="group-inventory-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-notification-group" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="topic-notification-box" target="group-notification-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="group-payment-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="920" width="200" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="group-payment-title" value="&lt;b&gt;GROUP:&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;payment-processors&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="125" y="930" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="970" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment1-title" value="&lt;b&gt;Consumer 1&lt;/b&gt;&lt;br&gt;&lt;font&gt;Billing Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="135" y="980" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment1-partition" value="📌 Partition 0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="135" y="1015" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1095" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment2-title" value="&lt;b&gt;Consumer 2&lt;/b&gt;&lt;br&gt;&lt;font&gt;Analytics Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="135" y="1105" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment2-partition" value="📌 Partition 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="135" y="1140" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment2-function" value="• Coleta métricas&lt;br&gt;• Analisa conversão&lt;br&gt;• Detecta fraudes" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1152" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1220" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment3-title" value="&lt;b&gt;Consumer 3&lt;/b&gt;&lt;br&gt;&lt;font&gt;Refund Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="135" y="1230" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment3-partition" value="📌 Partition 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="135" y="1265" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment3-function" value="• Processa reembolsos&lt;br&gt;• Reverte transações" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1280" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="group-inventory-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="325" y="920" width="200" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="group-inventory-title" value="&lt;b&gt;GROUP:&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;inventory-managers&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="350" y="930" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="345" y="970" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory1-title" value="&lt;b&gt;Consumer 1&lt;/b&gt;&lt;br&gt;&lt;font&gt;Stock Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="360" y="980" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory1-partition" value="📌 Partition 0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="360" y="1015" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory1-function" value="• Atualiza estoque&lt;br&gt;• Reserva produtos&lt;br&gt;• Libera itens" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="355" y="1027" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="345" y="1095" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory2-title" value="&lt;b&gt;Consumer 2&lt;/b&gt;&lt;br&gt;&lt;font&gt;Warehouse Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="360" y="1105" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory2-partition" value="📌 Partition 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="360" y="1140" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory2-function" value="• Separa pedidos&lt;br&gt;• Notifica armazém&lt;br&gt;• Prepara envio" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="355" y="1150" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="345" y="1220" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory3-title" value="&lt;b&gt;Consumer 3&lt;/b&gt;&lt;br&gt;&lt;font&gt;Restock Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="360" y="1230" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory3-partition" value="📌 Partition 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="360" y="1265" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-inventory3-function" value="• Monitora níveis&lt;br&gt;• Aciona reposição" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="355" y="1280" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="group-notification-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="550" y="920" width="200" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="group-notification-title" value="&lt;b&gt;GROUP:&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;notification-senders&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="922.5" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="970" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification1-title" value="&lt;b&gt;Consumer 1&lt;/b&gt;&lt;br&gt;&lt;font&gt;Email Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="585" y="980" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification1-partition" value="📌 Partition 0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="585" y="1015" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification1-function" value="• Envia emails&lt;br&gt;• Templates HTML&lt;br&gt;• Tracking abertura" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1027" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1095" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification2-title" value="&lt;b&gt;Consumer 2&lt;/b&gt;&lt;br&gt;&lt;font&gt;SMS Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="585" y="1105" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification2-partition" value="📌 Partition 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="585" y="1140" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification2-function" value="• Envia SMS&lt;br&gt;• Gateway Twilio&lt;br&gt;• Confirma entrega" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1152" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1220" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification3-title" value="&lt;b&gt;Consumer 3&lt;/b&gt;&lt;br&gt;&lt;font&gt;Push Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="585" y="1230" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification3-partition" value="📌 Partition 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="585" y="1265" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-notification3-function" value="• Push notifications&lt;br&gt;• Firebase/APNs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1280" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="architecture-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1410" width="710" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="architecture-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;ARQUITETURA EVENT-DRIVEN&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="1425" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arch1" value="✓ &lt;b&gt;DESACOPLAMENTO:&lt;/b&gt; Cada serviço processa eventos independentemente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1466" width="650" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arch2" value="✓ &lt;b&gt;ESCALABILIDADE:&lt;/b&gt; Consumer Groups escalam independentemente por tópico" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1496" width="650" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arch3" value="✓ &lt;b&gt;ESPECIALIZAÇÃO:&lt;/b&gt; Cada grupo foca em um domínio específico (payments, inventory, notifications)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1526" width="650" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arch4" value="✓ &lt;b&gt;RESILIÊNCIA:&lt;/b&gt; Falha em um consumer group não afeta os outros grupos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1556" width="650" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1630" width="710" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-title" value="&lt;b&gt;FLUXO DE PROCESSAMENTO DE PEDIDO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="1640" width="400" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step1" value="&lt;b&gt;1. ORDER SERVICE&lt;/b&gt; recebe pedido do cliente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1680" width="650" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step2" value="&lt;b&gt;2. PUBLICA EVENTOS&lt;/b&gt; em múltiplos tópicos: &lt;font style=&quot;font-size: 11px;&quot;&gt;PAYMENT_PROCESSED, INVENTORY_UPDATED, ORDER_CONFIRMED&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1703" width="650" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step3" value="&lt;b&gt;3. CONSUMER GROUPS&lt;/b&gt; processam eventos em paralelo:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1726" width="650" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step3a" value="   • &lt;b&gt;payment-processors&lt;/b&gt; → Processa pagamento, emite fatura, detecta fraudes" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="115" y="1747" width="650" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step3b" value="   • &lt;b&gt;inventory-managers&lt;/b&gt; → Atualiza estoque, separa pedido, aciona armazém" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="115" y="1765" width="650" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step3c" value="   • &lt;b&gt;notification-senders&lt;/b&gt; → Envia email, SMS e push notification para cliente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="115" y="1783" width="650" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step4" value="&lt;b&gt;4. PROCESSAMENTO PARALELO&lt;/b&gt; → Todos grupos processam simultaneamente sem bloqueios" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="1805" width="650" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="benefits-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1850" width="710" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="benefits-title" value="&lt;b&gt;BENEFÍCIOS DA ARQUITETURA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="275" y="1860" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit1-ecommerce" value="&lt;b&gt;PERFORMANCE&lt;/b&gt;&lt;br&gt;Processamento paralelo&amp;nbsp;&lt;div&gt;reduz latência total do sistema&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1900" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit2-ecommerce" value="&lt;b&gt;MANUTENÇÃO&lt;/b&gt;&lt;br&gt;Cada grupo evolui&amp;nbsp;&lt;div&gt;independentemente sem impacto&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=center;" parent="1" vertex="1">
+          <mxGeometry x="280" y="1900" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit3-ecommerce" value="&lt;b&gt;OBSERVABILIDADE&lt;/b&gt;&lt;br&gt;Métricas isoladas por domínio de negócio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=center;" parent="1" vertex="1">
+          <mxGeometry x="460" y="1900" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit4-ecommerce" value="&lt;b&gt;CONFIABILIDADE&lt;/b&gt;&lt;br&gt;Falhas isoladas não propagam entre serviços" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=center;" parent="1" vertex="1">
+          <mxGeometry x="640" y="1900" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4FcL2TbwZR0h1MDu1cNS-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="consumer-payment2-function" target="consumer-payment2-function">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-payment1-function" value="• Processa pagamentos&lt;br&gt;• Atualiza faturas&lt;br&gt;• Gera recibos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="600" y="1737" width="140" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

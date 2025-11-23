@@ -1,0 +1,367 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram id="kafka-hardware-configuration" name="Kafka Hardware Configuration">
+    <mxGraphModel dx="1181" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Configuração de Hardware Recomendada&#xa;para Cluster Kafka" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="20" width="450" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="broker-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3" parent="1" vertex="1">
+          <mxGeometry x="40" y="100" width="770" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="broker-label" value="NÓ BROKER KAFKA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="325" y="110" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="70" y="160" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-icon" value="CPU" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="140" y="175" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-title" value="PROCESSADOR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="110" y="265" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-cores-label" value="Núcleos:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="295" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-cores-value" value="16-32 cores" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="150" y="295" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-freq-label" value="Frequência:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="315" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-freq-value" value="2.5+ GHz" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="155" y="315" width="115" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-type-label" value="Tipo:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="335" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-type-value" value="Intel Xeon ou&#xa;AMD EPYC" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="150" y="335" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-usage" value="Uso típico:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="375" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-usage-value" value="Compressão,&#xa;checksums, rede" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="155" y="375" width="115" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-recommendation" value="✓ Produção" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="415" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-dev" value="Dev: 4-8 cores" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=8" parent="1" vertex="1">
+          <mxGeometry x="175" y="415" width="95" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="315" y="160" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-icon" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;RAM&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="360" y="175" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-bars" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="375" y="195" width="15" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-bars2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="400" y="195" width="15" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-bars3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="425" y="195" width="15" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-bars4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="450" y="195" width="15" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-title" value="MEMÓRIA RAM" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="355" y="265" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-size-label" value="Capacidade:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="330" y="295" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-size-value" value="64-128 GB" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="410" y="295" width="105" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-type-label" value="Tipo:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="330" y="315" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-type-value" value="DDR4/DDR5 ECC" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="410" y="315" width="105" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-speed-label" value="Velocidade:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="330" y="335" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-speed-value" value="2666+ MHz" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="410" y="335" width="105" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-usage" value="Uso:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="330" y="360" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-usage-value" value="Page cache,&#xa;buffers, heap JVM&#xa;(6-12GB)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="410" y="360" width="105" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-recommendation" value="✓ Produção" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="330" y="415" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-dev" value="Dev: 16-32 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=8" parent="1" vertex="1">
+          <mxGeometry x="420" y="415" width="95" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="560" y="160" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-icon" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="630" y="175" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-title" value="ARMAZENAMENTO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="600" y="265" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-capacity-label" value="Capacidade:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="295" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-capacity-value" value="1-10 TB por nó" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="655" y="295" width="105" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-type-label" value="Tipo:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="315" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-type-value" value="SSD NVMe" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="655" y="315" width="105" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-iops-label" value="IOPS:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="335" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-iops-value" value="50,000+" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="655" y="335" width="105" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-raid-label" value="RAID:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="355" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-raid-value" value="RAID 10 ou JBOD" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="655" y="355" width="105" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-usage" value="Uso:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="375" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-usage-value" value="Log segments,&#xa;índices" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="655" y="375" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-recommendation" value="✓ Produção" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="415" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-dev" value="Dev: 100-500GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=8" parent="1" vertex="1">
+          <mxGeometry x="665" y="415" width="95" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="network-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3" parent="1" vertex="1">
+          <mxGeometry x="40" y="510" width="770" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="network-label" value="REDE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="365" y="520" width="120" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="network-bandwidth-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="70" y="560" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="network-bandwidth-label" value="Largura de Banda" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="90" y="570" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="network-bandwidth-value" value="10 Gbps (mínimo)&#xa;25-100 Gbps (ideal)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="90" y="595" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="network-latency-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="270" y="560" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="network-latency-label" value="Latência" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="285" y="570" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="network-latency-value" value="&amp;lt; 1ms (intra-DC)&#xa;&amp;lt; 10ms (inter-DC)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="285" y="595" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="network-topology-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="440" y="560" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="network-topology-label" value="Topologia" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="455" y="570" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="network-topology-value" value="Dedicada para&#xa;replicação" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="455" y="595" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="network-redundancy-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="610" y="560" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="network-redundancy-label" value="Redundância" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="625" y="570" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="network-redundancy-value" value="NICs redundantes&#xa;(bonding)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="625" y="595" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zookeeper-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3" parent="1" vertex="1">
+          <mxGeometry x="40" y="680" width="370" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="zookeeper-label" value="NÓ ZOOKEEPER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="135" y="690" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-cpu-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="70" y="730" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-cpu-label" value="CPU:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="740" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-cpu-value" value="4-8 cores | 2.0+ GHz" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="130" y="740" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-cpu-note" value="Menor demanda que brokers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="85" y="760" width="275" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-memory-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="70" y="805" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-memory-label" value="RAM:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="815" width="45" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-memory-value" value="8-16 GB | Heap JVM: 2-4 GB" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="135" y="815" width="225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-memory-note" value="Mantém metadados em memória" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="85" y="835" width="275" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-storage-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="70" y="880" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-storage-label" value="Disco:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="890" width="45" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zk-storage-value" value="50-200 GB SSD | Baixa latência crítica" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="135" y="890" width="225" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3" parent="1" vertex="1">
+          <mxGeometry x="440" y="680" width="370" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-label" value="NÓ KAFKA CONNECT / STREAMS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="485" y="690" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-cpu-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="470" y="730" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-cpu-label" value="CPU:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="485" y="740" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-cpu-value" value="8-16 cores | 2.5+ GHz" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="530" y="740" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-cpu-note" value="Processamento de transformações" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="485" y="760" width="275" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-memory-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="470" y="805" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-memory-label" value="RAM:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="485" y="815" width="45" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-memory-value" value="16-32 GB | Heap JVM: 4-8 GB" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="535" y="815" width="225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-memory-note" value="Cache de dados e state stores" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="485" y="835" width="275" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-storage-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="470" y="880" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-storage-label" value="Disco:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="485" y="890" width="45" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-storage-value" value="100-500 GB SSD | State stores locais" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="535" y="890" width="225" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3" parent="1" vertex="1">
+          <mxGeometry x="40" y="970" width="770" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-label" value="DIMENSIONAMENTO DE CLUSTER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="270" y="980" width="310" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-small-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="70" y="1020" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-small-label" value="PEQUENO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="1030" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-small-brokers" value="3 Brokers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="85" y="1055" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-small-zk" value="3 ZooKeeper" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="85" y="1070" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-small-throughput" value="Throughput: 100 MB/s" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="85" y="1085" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-small-data" value="Dados: 5-10 TB" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="85" y="1100" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-medium-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="315" y="1020" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-medium-label" value="MÉDIO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="365" y="1030" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-medium-brokers" value="6-10 Brokers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="330" y="1055" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-medium-zk" value="5 ZooKeeper" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="330" y="1070" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-medium-throughput" value="Throughput: 500 MB/s" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="330" y="1085" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-medium-data" value="Dados: 20-50 TB" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="330" y="1100" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-large-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="560" y="1020" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-large-label" value="GRANDE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="610" y="1030" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-large-brokers" value="10+ Brokers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="575" y="1055" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-large-zk" value="5-7 ZooKeeper" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="575" y="1070" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-large-throughput" value="Throughput: 1+ GB/s" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="575" y="1085" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sizing-large-data" value="Dados: 100+ TB" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="575" y="1100" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="practices-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="40" y="1180" width="770" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="practices-label" value="MELHORES PRÁTICAS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="310" y="1190" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="practice1" value="✓ Usar discos dedicados para logs Kafka" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1220" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="practice2" value="✓ Separar discos para SO, logs e dados" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1240" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="practice3" value="✓ Monitorar uso de CPU, memória e I/O disk" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1260" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="practice4" value="✓ Configurar RAID 10 para redundância e performance" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1280" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="practice5" value="✓ Ajustar heap JVM (25% da RAM total)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="1220" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="practice6" value="✓ Usar page cache para I/O otimizado" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="1240" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="practice7" value="✓ Habilitar compressão (lz4, snappy) para economizar disco" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="1260" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="practice8" value="✓ Planejar crescimento: adicionar nós antes de saturar" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="1280" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="footer-note" value="Configurações recomendadas para ambientes de produção. Ajustar conforme carga de trabalho específica.&#xa;Considerar sempre redundância, monitoramento e planejamento de capacidade." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="120" y="1350" width="610" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

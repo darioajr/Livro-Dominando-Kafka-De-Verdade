@@ -1,0 +1,307 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Partitioned Topic" id="partitioned-topic">
+    <mxGraphModel dx="826" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Tópico Particionado - Kafka&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="275" y="40" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Produtores, Partições e Consumidores" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="275" y="75" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="producers-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="130" width="650" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="producers-title" value="&lt;b&gt;PRODUTORES&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="100" y="135" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer1" value="&lt;b&gt;Produtor 1&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="140" y="185" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="producer1-label" value="key: A, B" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="163" y="240" width="120" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="producer2" value="&lt;b&gt;Produtor 2&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="295" y="185" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="producer2-label" value="key: C, D" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="325" y="240" width="120" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="producer3" value="&lt;b&gt;Produtor 3&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="450" y="185" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="producer3-label" value="key: E, F" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="480" y="240" width="120" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="producer4" value="&lt;b&gt;Produtor 4&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="605" y="185" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="producer4-label" value="key: null" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="575" y="240" width="120" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;verticalAlign=top;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
+          <mxGeometry x="100" y="320" width="650" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-title" value="&lt;b&gt;TÓPICO:&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;orders.events&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="100" y="330" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="partition0-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="140" y="380" width="570" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="partition0-title" value="&lt;b&gt;Partição 0&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="150" y="385" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-msg1" value="A:M1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="160" y="420" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-msg2" value="A:M2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="230" y="420" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-msg3" value="E:M1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="300" y="420" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-msg4" value="A:M3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="370" y="420" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-msg5" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="440" y="425" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-offset" value="Offset: 0, 1, 2, 3, ..." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="180" y="463" width="320" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="partition1-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="140" y="500" width="570" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="partition1-title" value="&lt;b&gt;Partição 1&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="150" y="505" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-msg1" value="B:M1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="160" y="540" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-msg2" value="F:M1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="230" y="540" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-msg3" value="B:M2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="300" y="540" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-msg4" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="370" y="545" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-offset" value="Offset: 0, 1, 2, ..." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="160" y="583" width="320" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="partition2-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="140" y="620" width="570" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="partition2-title" value="&lt;b&gt;Partição 2&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="150" y="625" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-msg1" value="C:M1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="160" y="660" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-msg2" value="C:M2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="230" y="660" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-msg3" value="RR:M1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="300" y="660" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-msg4" value="C:M3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="370" y="660" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-msg5" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="440" y="665" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-offset" value="Offset: 0, 1, 2, 3, ..." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="160" y="703" width="320" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="partition3-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="140" y="740" width="570" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="partition3-title" value="&lt;b&gt;Partição 3&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="150" y="745" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-msg1" value="D:M1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="160" y="780" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-msg2" value="RR:M2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="230" y="780" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-msg3" value="D:M2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="300" y="780" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-msg4" value="RR:M3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="370" y="780" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-msg5" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="440" y="785" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-offset" value="Offset: 0, 1, 2, 3, ..." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="160" y="823" width="320" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p1-part0" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.937;exitY=1.012;entryX=0.2;entryY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="producer1" target="partition0-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-p1-label" value="hash(A,B)→P0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="170" y="290" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p1-part1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;exitX=0.3;exitY=1;entryX=0.062;entryY=0.008;dashed=1;dashPattern=4 4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="producer1" target="partition1-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-p2-part2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.378;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="producer2" target="partition2-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-p2-label" value="hash(C,D)→P2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="305" y="565" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p2-part3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;exitX=0.3;exitY=1;entryX=0.336;entryY=0.004;dashed=1;dashPattern=4 4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="producer2" target="partition3-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-p3-part0" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.651;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="producer3" target="partition0-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-p3-label" value="hash(E,F)→P0,P1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="475" y="435" width="100" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p3-part1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.3;exitY=1;entryX=0.607;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="producer3" target="partition1-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-p4-part2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.921;entryY=-0.024;dashed=1;dashPattern=4 4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="producer4" target="partition2-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-p4-part3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;exitX=0.7;exitY=1;entryX=0.966;entryY=0.004;dashed=1;dashPattern=4 4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="producer4" target="partition3-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-p4-label" value="Round-Robin" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="587" y="565" width="95" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="consumers-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="900" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="consumers-title" value="&lt;b&gt;GRUPO DE CONSUMIDORES: order-processing-group&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="100" y="905" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer1" value="&lt;b&gt;Consumidor 1&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="140" y="960" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer1-partition" value="Lê: Partição 0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="140" y="1015" width="140" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer1-offset" value="Offset atual: 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1030" width="140" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer2" value="&lt;b&gt;Consumidor 2&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="305" y="960" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer2-partition" value="Lê: Partição 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="305" y="1015" width="140" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer2-offset" value="Offset atual: 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="305" y="1030" width="140" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer3" value="&lt;b&gt;Consumidor 3&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="470" y="960" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer3-partition" value="Lê: Partição 2, 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="470" y="1015" width="140" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer3-offset" value="P2: offset 3, P3: offset 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="470" y="1030" width="140" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-part0-c1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.2;exitY=1;entryX=0.846;entryY=0.032;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="partition0-container" target="consumer1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1000" as="sourcePoint" />
+            <mxPoint x="450" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-part1-c2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.35;exitY=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="partition1-container" target="consumer2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1000" as="sourcePoint" />
+            <mxPoint x="450" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-part2-c3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.65;exitY=1.004;entryX=0.3;entryY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="partition2-container" target="consumer3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1000" as="sourcePoint" />
+            <mxPoint x="450" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-part3-c3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.75;exitY=1;entryX=0.7;entryY=0;exitDx=0;exitDy=0;" parent="1" source="partition3-container" target="consumer3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="1000" as="sourcePoint" />
+            <mxPoint x="450" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1110" width="650" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="&lt;b&gt;LEGENDA E CARACTERÍSTICAS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1115" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-msg-key" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1160" width="50" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-msg-key-text" value="Mensagem com chave específica" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="190" y="1160" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-msg-nokey" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#000000;strokeWidth=1;fontSize=9;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1195" width="50" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-msg-nokey-text" value="Mensagem distribuída (sem chave ou RR)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="190" y="1195" width="250" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-arrow-solid" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="1240" as="sourcePoint" />
+            <mxPoint x="180" y="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-arrow-solid-text" value="Fluxo principal (particionamento por chave)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="190" y="1230" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-arrow-dashed" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=4 4;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="1172" as="sourcePoint" />
+            <mxPoint x="510" y="1172" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-arrow-dashed-text" value="Distribuição round-robin (sem chave)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="520" y="1160" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="keypoint1" value="✓ Particionamento por chave garante ordem dentro da partição" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="460" y="1195" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="keypoint2" value="✓ Cada consumidor processa partições exclusivas no grupo" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="460" y="1220" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="keypoint3" value="✓ Offset rastreia posição de leitura por partição" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="460" y="1245" width="280" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

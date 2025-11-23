@@ -1,0 +1,313 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Event Sourcing E-commerce Flow" id="event-sourcing-ecommerce">
+    <mxGraphModel dx="984" dy="572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Event Sourcing em E-commerce&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="175" y="40" width="500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Reconstrução de Estado a partir de Eventos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="175" y="75" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="user-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="130" width="650" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="user-title" value="&lt;b&gt;AÇÕES DO USUÁRIO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="135" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="user-icon" value="&lt;b&gt;👤&lt;/b&gt;&lt;br&gt;Cliente" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="130" y="180" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="action1" value="&lt;b&gt;Adicionar&lt;/b&gt;&lt;br&gt;ao Carrinho" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="230" y="185" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action2" value="&lt;b&gt;Alterar&lt;/b&gt;&lt;br&gt;Quantidade" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="340" y="185" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action3" value="&lt;b&gt;Remover&lt;/b&gt;&lt;br&gt;do Carrinho" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="185" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action4" value="&lt;b&gt;Aplicar&lt;/b&gt;&lt;br&gt;Cupom" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="560" y="185" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="action5" value="&lt;b&gt;Finalizar&lt;/b&gt;&lt;br&gt;Compra" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="670" y="185" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="events-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="310" width="650" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="events-title" value="&lt;b&gt;EVENTOS PUBLICADOS NO KAFKA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="315" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="timeline" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="380" as="sourcePoint" />
+            <mxPoint x="720" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="timeline-label" value="&lt;b&gt;Sequência Temporal de Eventos&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="130" y="360" width="180" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="event1-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="130" y="400" width="110" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="event1-title" value="&lt;b&gt;ItemAddedToCart&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="130" y="405" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="event1-data" value="eventId: e001&lt;br&gt;cartId: cart-123&lt;br&gt;productId: prod-456&lt;br&gt;quantity: 2&lt;br&gt;price: 99.90&lt;br&gt;timestamp: 10:15:00" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=8;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="138" y="430" width="95" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="event2-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="255" y="400" width="110" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="event2-title" value="&lt;b&gt;ItemQuantityChanged&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="255" y="405" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="event2-data" value="eventId: e002&lt;br&gt;cartId: cart-123&lt;br&gt;productId: prod-456&lt;br&gt;oldQuantity: 2&lt;br&gt;newQuantity: 3&lt;br&gt;timestamp: 10:16:30" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=8;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="263" y="430" width="95" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="event3-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="380" y="400" width="110" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="event3-title" value="&lt;b&gt;ItemRemovedFromCart&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="380" y="405" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="event3-data" value="eventId: e003&lt;br&gt;cartId: cart-123&lt;br&gt;productId: prod-789&lt;br&gt;quantity: 1&lt;br&gt;reason: user_action&lt;br&gt;timestamp: 10:18:15" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=8;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="388" y="430" width="95" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="event4-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="505" y="400" width="110" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="event4-title" value="&lt;b&gt;CouponApplied&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="505" y="405" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="event4-data" value="eventId: e004&lt;br&gt;cartId: cart-123&lt;br&gt;couponCode: DESC10&lt;br&gt;discountType: %&lt;br&gt;discountValue: 10&lt;br&gt;timestamp: 10:19:45" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=8;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="513" y="430" width="95" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="event5-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="630" y="400" width="110" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="event5-title" value="&lt;b&gt;OrderPlaced&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="630" y="405" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="event5-data" value="eventId: e005&lt;br&gt;orderId: ord-789&lt;br&gt;cartId: cart-123&lt;br&gt;totalAmount: 269.73&lt;br&gt;paymentMethod: card&lt;br&gt;timestamp: 10:22:00" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=8;fontColor=#ffffff;fontFamily=Courier New;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="638" y="430" width="95" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-a1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;" parent="1" source="action1" target="event1-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-a2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;" parent="1" source="action2" target="event2-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-a3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;" parent="1" source="action3" target="event3-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-a4" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;" parent="1" source="action4" target="event4-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-a5" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;" parent="1" source="action5" target="event5-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kafka-topic-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="630" width="650" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-topic-title" value="&lt;b&gt;TÓPICO KAFKA: ecommerce.cart.events&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#000000;fontStyle=1;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="100" y="635" width="650" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-partition-label" value="&lt;b&gt;Particionamento por cartId - Garantia de ordenação por carrinho&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="100" y="660" width="650" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-retention" value="Retention: 30 dias | Replication Factor: 3 | Cleanup Policy: compact" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#000000;fontStyle=2;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="100" y="685" width="650" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-events-kafka" value="Publicação" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=10;fontStyle=2" parent="1" source="events-container" target="kafka-topic-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="750" as="sourcePoint" />
+            <mxPoint x="450" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="reconstruction-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="760" width="650" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="reconstruction-title" value="&lt;b&gt;RECONSTRUÇÃO DE ESTADO A PARTIR DOS EVENTOS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="765" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="reconstruction-desc" value="O estado atual do carrinho é calculado aplicando todos os eventos em ordem cronológica" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="100" y="790" width="650" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="130" y="825" width="280" height="265" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-title" value="&lt;b&gt;REPLAY DE EVENTOS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="130" y="830" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-step1" value="&lt;b&gt;1.&lt;/b&gt; ItemAddedToCart → Items: [prod-456: qty=2]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="140" y="860" width="260" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-step2" value="&lt;b&gt;2.&lt;/b&gt; ItemQuantityChanged → Items: [prod-456: qty=3]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="140" y="885" width="280" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-step3" value="&lt;b&gt;3.&lt;/b&gt; ItemRemovedFromCart → Items: [prod-456: qty=3]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="140" y="910" width="290" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-step3-note" value="(prod-789 removido)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="160" y="923" width="240" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-step4" value="&lt;b&gt;4.&lt;/b&gt; CouponApplied → Discount: 10% (DESC10)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="140" y="945" width="260" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-step5" value="&lt;b&gt;5.&lt;/b&gt; OrderPlaced → Status: COMPLETED" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="140" y="970" width="260" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-separator" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="1000" as="sourcePoint" />
+            <mxPoint x="400" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="replay-final-title" value="&lt;b&gt;ESTADO FINAL:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="140" y="1005" width="260" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="replay-final" value="Cart ID: cart-123&#xa;Items: 1 (prod-456 x3 @ R$ 99.90)&#xa;Subtotal: R$ 299.70&#xa;Discount: R$ 29.97 (10%)&#xa;Total: R$ 269.73&#xa;Status: ORDER_PLACED" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=8;fontColor=#000000;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="156" y="1015" width="260" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="state-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="440" y="825" width="280" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="state-title" value="&lt;b&gt;ESTADO MATERIALIZADO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="440" y="830" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="state-visual" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;strokeWidth=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="460" y="860" width="240" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="state-cart-title" value="&lt;b&gt;🛒 Carrinho cart-123&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="460" y="865" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="state-divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="890" as="sourcePoint" />
+            <mxPoint x="690" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="state-item" value="&lt;b&gt;Produto:&lt;/b&gt; prod-456&#xa;&lt;b&gt;Nome:&lt;/b&gt; Notebook Gamer&#xa;&lt;b&gt;Quantidade:&lt;/b&gt; 3&#xa;&lt;b&gt;Preço Unit.:&lt;/b&gt; R$ 99.90&#xa;&lt;b&gt;Subtotal:&lt;/b&gt; R$ 299.70" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=8;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="475" y="900" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="state-divider2" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="968" as="sourcePoint" />
+            <mxPoint x="690" y="968" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="state-coupon" value="&lt;b&gt;Cupom:&lt;/b&gt; DESC10 (-10%): R$ -29.97" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="475" y="975" width="210" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="state-divider3" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="995" as="sourcePoint" />
+            <mxPoint x="690" y="995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="state-total" value="&lt;b&gt;TOTAL: R$ 269.73&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="475" y="1002" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-recon" value="Consumo e Replay" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=10;fontStyle=2" parent="1" source="kafka-topic-box" target="reconstruction-container" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="850" as="sourcePoint" />
+            <mxPoint x="450" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="benefits-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1120" width="650" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="benefits-title" value="&lt;b&gt;VANTAGENS DO EVENT SOURCING&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="1125" width="650" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit1" value="&lt;b&gt;1. Auditoria Completa:&lt;/b&gt; Histórico imutável de todas as ações do usuário" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1160" width="340" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit2" value="&lt;b&gt;2. Replay Temporal:&lt;/b&gt; Reconstruir estado em qualquer ponto no tempo" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1181" width="330" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit3" value="&lt;b&gt;3. Debugging:&lt;/b&gt; Rastreamento completo do comportamento do usuário" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1202" width="330" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit4" value="&lt;b&gt;4. Analytics:&lt;/b&gt; Insights sobre padrões de abandono e conversão" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1223" width="300" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit5" value="&lt;b&gt;5. Reprocessamento:&lt;/b&gt; Aplicar nova lógica de negócio em eventos antigos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="425" y="1160" width="340" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit6" value="&lt;b&gt;6. Recuperação:&lt;/b&gt; Reconstruir estado após falhas sem perda de dados" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="425" y="1181" width="330" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit7" value="&lt;b&gt;7. Múltiplas Views:&lt;/b&gt; Criar diferentes projeções do mesmo conjunto de eventos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="425" y="1202" width="360" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit8" value="&lt;b&gt;8. Compliance:&lt;/b&gt; Atende requisitos regulatórios de rastreabilidade" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="425" y="1223" width="320" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="examples-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1280" width="650" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="examples-title" value="&lt;b&gt;EXEMPLOS DE CONSULTAS BASEADAS EM EVENTOS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="1285" width="650" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="example1-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1320" width="200" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="example1-title" value="&lt;b&gt;Taxa de Conversão&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="1325" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="example1-desc" value="Filtrar eventos:&#xa;• ItemAddedToCart&#xa;• OrderPlaced&#xa;&#xa;Calcular razão:&#xa;Orders / Carts iniciados" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=9;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1345" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="example2-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1320" width="200" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="example2-title" value="&lt;b&gt;Produtos Removidos&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="340" y="1325" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="example2-desc" value="Análise de:&#xa;• ItemRemovedFromCart&#xa;&#xa;Identificar:&#xa;• Produtos mais removidos&#xa;• Motivos de abandono" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=9;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="350" y="1345" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="example3-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="560" y="1320" width="160" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="example3-title" value="&lt;b&gt;Efetividade Cupons&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="560" y="1325" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="example3-desc" value="Correlacionar:&#xa;• CouponApplied&#xa;• OrderPlaced&#xa;&#xa;Medir:&#xa;• ROI por cupom" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=9;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1345" width="140" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="concept-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1480" width="650" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="concept-title" value="&lt;b&gt;💡 CONCEITO CHAVE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="1485" width="650" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="concept-text" value="No Event Sourcing, o estado atual é uma função dos eventos passados. Em vez de armazenar apenas o estado final,&#xa;armazenamos todos os eventos que levaram a esse estado. Isso permite reconstruir, auditar e analisar&#xa;o sistema em qualquer ponto da sua história." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#000000;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="110" y="1508" width="630" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="formula" value="&lt;b&gt;Estado(t) = Replay(Eventos[0..t])&lt;/b&gt;" style="text;html=1;strokeColor=#000000;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#000000;fontFamily=Courier New;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="275" y="1590" width="300" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

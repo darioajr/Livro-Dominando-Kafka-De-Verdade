@@ -1,0 +1,190 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="Fluxo de Eventos Kafka" id="kafka-event-flow-simple">
+    <mxGraphModel dx="1477" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 26px;&quot;&gt;Fluxo de Eventos no Kafka&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="175" y="30" width="500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Event Streaming Platform" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="275" y="70" width="300" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=3;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="120" as="sourcePoint" />
+            <mxPoint x="770" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step1-label" value="&lt;b&gt;ETAPA 1&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=14;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="80" y="150" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="step1-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;PRODUÇÃO DE EVENTOS&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="200" y="155" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producers-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="80" y="210" width="690" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="producer1" value="&lt;b&gt;Producer A&lt;/b&gt;&lt;br&gt;&lt;font&gt;Aplicação Web&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="110" y="240" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="producer2" value="&lt;b&gt;Producer B&lt;/b&gt;&lt;br&gt;&lt;font&gt;Microserviço&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="290" y="240" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="producer3" value="&lt;b&gt;Producer C&lt;/b&gt;&lt;br&gt;&lt;font&gt;API Externa&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="470" y="240" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="producer4" value="&lt;b&gt;Producer D&lt;/b&gt;&lt;br&gt;&lt;font&gt;IoT Device&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="610" y="240" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-action" value="Geram e publicam eventos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="300" y="305" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-prod-kafka" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="producers-box" target="kafka-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-prod-label" value="&lt;b&gt;publish()&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="370" y="345" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-label" value="&lt;b&gt;ETAPA 2&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=14;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="80" y="400" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;ARMAZENAMENTO E DISTRIBUIÇÃO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="200" y="405" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="80" y="460" width="690" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;KAFKA CLUSTER&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="275" y="475" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="530" width="610" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-title" value="&lt;b&gt;TÓPICO: &quot;eventos&quot;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="325" y="540" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-subtitle" value="Organiza eventos por categoria" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="300" y="565" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="partition0-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="145" y="600" width="560" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="partition0-label" value="&lt;b&gt;PARTITION 0&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="160" y="610" width="110" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-event1" value="Evento 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="160" y="640" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-event2" value="Evento 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="250" y="640" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-event3" value="Evento 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="340" y="640" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-event4" value="Evento 4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="430" y="640" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-event5" value="Evento 5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="520" y="640" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-append" value="➜" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="610" y="645" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="partition1-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="145" y="700" width="560" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="partition1-label" value="&lt;b&gt;PARTITION 1&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="160" y="710" width="110" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-event1" value="Evento 6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="160" y="740" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-event2" value="Evento 7" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="250" y="740" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-event3" value="Evento 8" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="340" y="740" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-event4" value="Evento 9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="430" y="740" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-append" value="➜" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="520" y="745" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="persistence-info" value="💾 Eventos armazenados em disco de forma durável e ordenada" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="200" y="785" width="450" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-cons" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="kafka-box" target="consumers-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="900" as="sourcePoint" />
+            <mxPoint x="450" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-cons-label" value="&lt;b&gt;subscribe() / poll()&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="340" y="855" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="step3-label" value="&lt;b&gt;ETAPA 3&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=14;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="80" y="910" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="step3-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CONSUMO E PROCESSAMENTO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="200" y="915" width="370" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumers-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="80" y="970" width="690" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-group-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=5 5;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1000" width="630" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-group-label" value="&lt;b&gt;Consumer Group: &quot;processadores&quot;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1010" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer1" value="&lt;b&gt;Consumer 1&lt;/b&gt;&lt;br&gt;&lt;font&gt;Processa Partition 0&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=13;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1050" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer2" value="&lt;b&gt;Consumer 2&lt;/b&gt;&lt;br&gt;&lt;font&gt;Processa Partition 1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=13;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1050" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer3" value="&lt;b&gt;Consumer 3&lt;/b&gt;&lt;br&gt;&lt;font&gt;Backup/Auditoria&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=13;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="460" y="1050" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer4" value="&lt;b&gt;Consumer 4&lt;/b&gt;&lt;br&gt;&lt;font&gt;Analytics&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=13;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="610" y="1050" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1190" width="690" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;FLUXO COMPLETO DE EVENTOS&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="250" y="1200" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step1" value="1️⃣ &lt;b&gt;PRODUCERS&lt;/b&gt; geram eventos de diferentes fontes" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1240" width="630" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step2" value="2️⃣ &lt;b&gt;KAFKA&lt;/b&gt; recebe, armazena e organiza eventos em tópicos/partições" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1265" width="630" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-step3" value="3️⃣ &lt;b&gt;CONSUMERS&lt;/b&gt; leem e processam eventos de forma independente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1290" width="630" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-benefits-title" value="&lt;b&gt;Benefícios:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="110" y="1320" width="630" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-benefit1" value="✓ Desacoplamento entre produtores e consumidores" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1340" width="300" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-benefit2" value="✓ Escalabilidade horizontal com partições" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1340" width="290" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-benefit3" value="✓ Persistência e reprocessamento de eventos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1355" width="300" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-benefit4" value="✓ Alta disponibilidade com replicação" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1355" width="290" height="15" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,241 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="E-commerce Event Flow" id="ecommerce-event-flow-diagram">
+    <mxGraphModel dx="1153" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Fluxo de Eventos: Sistema E-commerce&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="125" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Evento: &quot;Pedido Realizado&quot; - Arquitetura Event-Driven" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="200" y="70" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="120" as="sourcePoint" />
+            <mxPoint x="770" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="client-title" value="&lt;b&gt;1. AÇÃO DO CLIENTE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="300" y="140" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="customer" value="&lt;b&gt;👤 CLIENTE&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="325" y="185" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="customer-action" value="Realiza compra de produtos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="300" y="250" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-client-checkout" value="&lt;b&gt;POST /checkout&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="customer" target="checkout-system" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="310" width="650" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p0mnaNgyahAOuC8BxW-5-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="producer-title" target="customer-action" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-title" value="&lt;b&gt;2. PRODUTOR DE EVENTOS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="300" y="320" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="checkout-system" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="250" y="365" width="350" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="checkout-title" value="&lt;b&gt;🛒 SISTEMA DE CHECKOUT&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="300" y="375" width="250" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="checkout-step1" value="1. Processa pagamento" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="270" y="410" width="310" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="checkout-step2" value="2. Confirma pedido" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="270" y="430" width="310" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="checkout-step3" value="3. &lt;b&gt;Publica evento &quot;Pedido Realizado&quot;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="270" y="450" width="310" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-checkout-kafka" value="&lt;b&gt;producer.send()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="checkout-system" target="kafka-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="event-payload-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=3 3;" parent="1" vertex="1">
+          <mxGeometry x="120" y="545" width="260" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="event-payload-title" value="&lt;b&gt;📄 Payload do Evento:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="130" y="550" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="event-payload" value="{&lt;br&gt;  &quot;eventType&quot;: &quot;ORDER_PLACED&quot;,&lt;br&gt;  &quot;orderId&quot;: &quot;ORD-12345&quot;,&lt;br&gt;  &quot;customerId&quot;: &quot;CUST-789&quot;,&lt;br&gt;  &quot;items&quot;: [{...}],&lt;br&gt;  &quot;totalAmount&quot;: 459.90,&lt;br&gt;  &quot;timestamp&quot;: &quot;2025-11-16T...&quot;&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="135" y="570" width="230" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="100" y="700" width="650" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;3. APACHE KAFKA CLUSTER&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="250" y="715" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="150" y="770" width="550" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-title" value="&lt;b&gt;TÓPICO: &quot;pedidos-realizados&quot;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="300" y="780" width="250" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="partition0-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="170" y="820" width="510" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="partition0-label" value="&lt;b&gt;Partition 0&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="180" y="828" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-msg1" value="Offset 0&lt;br&gt;&lt;font&gt;ORD-12345&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="280" y="825" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-msg2" value="Offset 1&lt;br&gt;&lt;font&gt;ORD-12346&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="365" y="825" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-msg3" value="Offset 2&lt;br&gt;&lt;font&gt;ORD-12347&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="450" y="825" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-msg4" value="Offset 3&lt;br&gt;&lt;font&gt;ORD-12348&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="535" y="825" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p0-append" value="➜" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="620" y="833" width="30" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="partition1-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="170" y="885" width="510" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="partition1-label" value="&lt;b&gt;Partition 1&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="180" y="893" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-msg1" value="Offset 0&lt;br&gt;&lt;font&gt;ORD-12349&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="280" y="890" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-msg2" value="Offset 1&lt;br&gt;&lt;font&gt;ORD-12350&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="365" y="890" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-msg3" value="Offset 2&lt;br&gt;&lt;font&gt;ORD-12351&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="450" y="890" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-append" value="➜" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="535" y="898" width="30" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-info" value="✓ Retenção: 7 dias   ✓ Replicação: 3x   ✓ Persistência em disco" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#ffffff;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="200" y="955" width="450" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="consumers-title" value="&lt;b&gt;4. CONSUMIDORES DE EVENTOS (Processamento Independente)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="170" y="1040" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-inventory" value="&lt;b&gt;subscribe()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="kafka-box" target="inventory-consumer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-billing" value="&lt;b&gt;subscribe()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.35;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="kafka-box" target="billing-consumer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-email" value="&lt;b&gt;subscribe()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.6;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="kafka-box" target="email-consumer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-analytics" value="&lt;b&gt;subscribe()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.85;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="kafka-box" target="analytics-consumer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-consumer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1070" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-title" value="&lt;b&gt;📦 SISTEMA DE ESTOQUE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="90" y="1080" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-action1" value="• Lê evento" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="95" y="1110" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-action2" value="• Reserva produtos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="95" y="1127" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-action3" value="• Atualiza quantidade" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="95" y="1144" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-action4" value="• ✓ Commit offset" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="95" y="1161" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="billing-consumer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="260" y="1070" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="billing-title" value="&lt;b&gt;💰 SISTEMA DE FATURAMENTO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="265" y="1080" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="billing-action1" value="• Lê evento" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="275" y="1110" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="billing-action2" value="• Gera nota fiscal" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="275" y="1127" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="billing-action3" value="• Registra transação" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="275" y="1144" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="billing-action4" value="• ✓ Commit offset" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="275" y="1161" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="email-consumer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1070" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="email-title" value="&lt;b&gt;📧 NOTIFICAÇÃO EMAIL&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="455" y="1080" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="email-action1" value="• Lê evento" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="455" y="1110" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="email-action2" value="• Cria mensagem" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="455" y="1127" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="email-action3" value="• Envia email ao cliente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="455" y="1144" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="email-action4" value="• ✓ Commit offset" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="455" y="1161" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics-consumer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="620" y="1070" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics-title" value="&lt;b&gt;📊 ANALYTICS / BI&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="635" y="1080" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics-action1" value="• Lê evento" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="635" y="1110" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics-action2" value="• Agrega métricas" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="635" y="1127" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics-action3" value="• Armazena em Data Lake" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="635" y="1144" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics-action4" value="• ✓ Commit offset" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="635" y="1161" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="features-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1230" width="700" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="features-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;CARACTERÍSTICAS DO FLUXO EVENT-DRIVEN&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="230" y="1240" width="390" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="feat1" value="✓ &lt;b&gt;DESACOPLAMENTO:&lt;/b&gt; Sistema de checkout não conhece os consumidores" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1280" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feat2" value="✓ &lt;b&gt;PROCESSAMENTO PARALELO:&lt;/b&gt; Todos os consumidores processam simultaneamente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1305" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feat3" value="✓ &lt;b&gt;RESILIÊNCIA:&lt;/b&gt; Se um consumidor falha, outros não são afetados" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1330" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feat4" value="✓ &lt;b&gt;ESCALABILIDADE:&lt;/b&gt; Novos consumidores podem ser adicionados sem modificar o produtor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1355" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1420" width="700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;FLUXO DE COMUNICAÇÃO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="280" y="1430" width="290" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-diagram" value="Cliente → Checkout → Kafka (Tópico) → [Estoque | Faturamento | Email | Analytics]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1460" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-note" value="Cada consumidor processa o MESMO evento de forma INDEPENDENTE e ASSÍNCRONA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#ffffff;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="110" y="1485" width="640" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

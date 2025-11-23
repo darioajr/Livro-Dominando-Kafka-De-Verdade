@@ -1,0 +1,513 @@
+<mxfile host="app.diagrams.net" modified="2025-11-16T00:00:00.000Z" agent="5.0" version="22.1.11" etag="drawio-distributed-trace-map" type="device">
+  <diagram name="Distributed Trace Map" id="distributed-trace-map-diagram">
+    <mxGraphModel dx="1422" dy="2200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Título Principal -->
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Mapa de Rastreamento Distribuído&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="650" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="subtitle" value="Trace ID: abc123-def456-789ghi | Transaction: Order #50234" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="175" y="70" width="500" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Linha Divisória -->
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="120" as="sourcePoint" />
+            <mxPoint x="780" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- =============== TRACE OVERVIEW =============== -->
+        <mxCell id="overview-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="710" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="overview-title" value="&lt;b&gt;VISÃO GERAL DO TRACE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="160" width="300" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="overview-details" value="&lt;b&gt;Duração Total:&lt;/b&gt; 1.247ms&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Spans:&lt;/b&gt; 12&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Serviços:&lt;/b&gt; 6&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Status:&lt;/b&gt; ✅ Sucesso&lt;br&gt;&lt;b&gt;Timestamp:&lt;/b&gt; 2025-11-16 14:32:15.123 UTC&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Cliente:&lt;/b&gt; user_8472" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="90" y="185" width="650" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== WATERFALL CHART =============== -->
+        <mxCell id="waterfall-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="270" width="710" height="850" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="waterfall-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;WATERFALL CHART (Cascata de Latências)&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="225" y="285" width="400" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Timeline axis -->
+        <mxCell id="timeline-header" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="330" width="670" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="timeline-0ms" value="0ms" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="337" width="40" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="timeline-250ms" value="250ms" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="230" y="337" width="50" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="timeline-500ms" value="500ms" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="370" y="337" width="50" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="timeline-750ms" value="750ms" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="510" y="337" width="50" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="timeline-1000ms" value="1000ms" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="640" y="337" width="55" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="timeline-1247ms" value="1247ms" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1;fontColor=#8B0000;" vertex="1" parent="1">
+          <mxGeometry x="705" y="337" width="50" height="16" as="geometry" />
+        </mxCell>
+        
+        <!-- Vertical grid lines -->
+        <mxCell id="grid-250ms" value="" style="endArrow=none;html=1;strokeColor=#e0e0e0;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="360" as="sourcePoint" />
+            <mxPoint x="230" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="grid-500ms" value="" style="endArrow=none;html=1;strokeColor=#e0e0e0;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="360" as="sourcePoint" />
+            <mxPoint x="370" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="grid-750ms" value="" style="endArrow=none;html=1;strokeColor=#e0e0e0;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="360" as="sourcePoint" />
+            <mxPoint x="510" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="grid-1000ms" value="" style="endArrow=none;html=1;strokeColor=#e0e0e0;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="360" as="sourcePoint" />
+            <mxPoint x="650" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- =============== SPAN 1: API Gateway =============== -->
+        <mxCell id="span1-service" value="&lt;b&gt;API Gateway&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="380" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span1-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="380" width="410" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span1-duration" value="&lt;b&gt;1247ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="635" y="383" width="50" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span1-operation" value="GET /api/orders" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="400" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 2: Order Service =============== -->
+        <mxCell id="span2-service" value="&lt;b&gt;Order Service&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="435" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span2-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="225" y="435" width="400" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span2-duration" value="&lt;b&gt;1215ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="630" y="438" width="50" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span2-operation" value="processOrder()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="455" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 3: Kafka Producer =============== -->
+        <mxCell id="span3-service" value="&lt;b&gt;Kafka Producer&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="490" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span3-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="490" width="25" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span3-duration" value="&lt;b&gt;75ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="258" y="493" width="40" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span3-operation" value="send(order.created)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="510" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 4: Kafka Broker =============== -->
+        <mxCell id="span4-service" value="&lt;b&gt;Kafka Broker&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="545" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span4-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="255" y="545" width="15" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span4-duration" value="&lt;b&gt;45ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="273" y="548" width="40" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span4-operation" value="partition write" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="565" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 5: Inventory Service (parallel start) =============== -->
+        <mxCell id="span5-service" value="&lt;b&gt;Inventory Service&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="600" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span5-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="600" width="90" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span5-duration" value="&lt;b&gt;273ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="365" y="603" width="45" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span5-operation" value="checkInventory()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="620" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 6: Payment Service (parallel) =============== -->
+        <mxCell id="span6-service" value="&lt;b&gt;Payment Service&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="655" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span6-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8B0000;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="655" width="345" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span6-duration" value="&lt;b&gt;1050ms&lt;/b&gt; ⚠️" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="620" y="658" width="65" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span6-operation" value="processPayment()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="675" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 7: Payment Gateway API =============== -->
+        <mxCell id="span7-service" value="&lt;b&gt;Payment Gateway&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="710" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span7-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8B0000;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="285" y="710" width="325" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span7-duration" value="&lt;b&gt;987ms&lt;/b&gt; 🔴" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="615" y="713" width="60" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span7-operation" value="external API call" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="730" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 8: Database Query (Inventory) =============== -->
+        <mxCell id="span8-service" value="&lt;b&gt;Database (Inv)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="765" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span8-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="765" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span8-duration" value="&lt;b&gt;182ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="353" y="768" width="45" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span8-operation" value="SELECT inventory" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="785" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 9: Notification Service =============== -->
+        <mxCell id="span9-service" value="&lt;b&gt;Notification Svc&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="820" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span9-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="615" y="820" width="35" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span9-duration" value="&lt;b&gt;107ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="653" y="823" width="45" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span9-operation" value="sendEmail()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="840" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 10: Email Service =============== -->
+        <mxCell id="span10-service" value="&lt;b&gt;Email Service&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="875" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span10-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="875" width="25" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span10-duration" value="&lt;b&gt;76ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="648" y="878" width="40" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span10-operation" value="SMTP send" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="895" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 11: Database Write (Order) =============== -->
+        <mxCell id="span11-service" value="&lt;b&gt;Database (Order)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="930" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span11-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="930" width="35" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span11-duration" value="&lt;b&gt;105ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="268" y="933" width="45" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span11-operation" value="INSERT order" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="950" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SPAN 12: Cache Lookup =============== -->
+        <mxCell id="span12-service" value="&lt;b&gt;Redis Cache&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="985" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span12-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="985" width="8" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span12-duration" value="&lt;b&gt;23ms&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="276" y="988" width="40" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="span12-operation" value="GET user_data" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="90" y="1005" width="120" height="12" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== CRITICAL PATH HIGHLIGHT =============== -->
+        <mxCell id="critical-path-label" value="&lt;b&gt;⚠️ CAMINHO CRÍTICO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#8B0000;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=9;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="620" y="685" width="130" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow pointing to slowest span -->
+        <mxCell id="arrow-critical" value="" style="endArrow=classic;html=1;strokeColor=#8B0000;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="685" y="705" as="sourcePoint" />
+            <mxPoint x="610" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- =============== LATENCY SUMMARY =============== -->
+        <mxCell id="latency-summary" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1045" width="660" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="latency-summary-title" value="&lt;b&gt;RESUMO DE LATÊNCIAS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="310" y="1053" width="230" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="latency-summary-content" value="&lt;b&gt;Total:&lt;/b&gt; 1247ms&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Gargalo:&lt;/b&gt; Payment Gateway (987ms, 79% do total)&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Paralelo:&lt;/b&gt; Inventory + Payment executados simultaneamente" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1073" width="640" height="27" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== SERVICE DEPENDENCY MAP =============== -->
+        <mxCell id="dependency-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1170" width="710" height="380" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dependency-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;MAPA DE DEPENDÊNCIAS&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="250" y="1185" width="350" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- API Gateway -->
+        <mxCell id="dep-api" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1230" width="170" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-api-label" value="&lt;b&gt;API Gateway&lt;/b&gt;&lt;br&gt;1247ms (100%)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="1240" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Order Service -->
+        <mxCell id="dep-order" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1310" width="170" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-order-label" value="&lt;b&gt;Order Service&lt;/b&gt;&lt;br&gt;1215ms (97%)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="1320" width="150" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrow API -> Order -->
+        <mxCell id="arrow-api-order" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dep-api" target="dep-order">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Payment Service -->
+        <mxCell id="dep-payment" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1390" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-payment-label" value="&lt;b&gt;Payment Service&lt;/b&gt;&lt;br&gt;1050ms (84%) ⚠️" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1400" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Inventory Service -->
+        <mxCell id="dep-inventory" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1390" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-inventory-label" value="&lt;b&gt;Inventory Service&lt;/b&gt;&lt;br&gt;273ms (22%)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="310" y="1400" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Notification Service -->
+        <mxCell id="dep-notification" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1390" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-notification-label" value="&lt;b&gt;Notification Svc&lt;/b&gt;&lt;br&gt;107ms (9%)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="490" y="1400" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Kafka -->
+        <mxCell id="dep-kafka" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1390" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-kafka-label" value="&lt;b&gt;Kafka&lt;/b&gt;&lt;br&gt;75ms (6%)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="670" y="1400" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Arrows Order -> Services -->
+        <mxCell id="arrow-order-payment" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dep-order" target="dep-payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-order-inventory" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.4;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dep-order" target="dep-inventory">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-order-notification" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.6;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dep-order" target="dep-notification">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-order-kafka" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dep-order" target="dep-kafka">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- External Services -->
+        <mxCell id="dep-payment-gateway" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1470" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-payment-gateway-label" value="&lt;b&gt;Payment Gateway&lt;/b&gt;&lt;br&gt;987ms (79%) 🔴" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1480" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-payment-gateway" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dep-payment" target="dep-payment-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-database" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1470" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-database-label" value="&lt;b&gt;Database&lt;/b&gt;&lt;br&gt;287ms (23%)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="310" y="1480" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-inventory-db" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dep-inventory" target="dep-database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-email" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1470" width="150" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dep-email-label" value="&lt;b&gt;Email Service&lt;/b&gt;&lt;br&gt;76ms (6%)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="490" y="1480" width="130" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-notification-email" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dep-notification" target="dep-email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== INSIGHTS SECTION =============== -->
+        <mxCell id="insights-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1600" width="710" height="240" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="insights-title-main" value="&lt;b&gt;ANÁLISE E RECOMENDAÇÕES&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="250" y="1615" width="350" height="22" as="geometry" />
+        </mxCell>
+        
+        <!-- Problem -->
+        <mxCell id="problem-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B0000;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1652" width="325" height="175" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="problem-title" value="&lt;b&gt;🔴 PROBLEMA IDENTIFICADO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="105" y="1660" width="295" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="problem-content" value="&lt;b&gt;Gargalo: Payment Gateway (API Externa)&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Impacto:&lt;/b&gt;&lt;br&gt;• 987ms (79% da latência total)&lt;br&gt;• Chamada síncrona bloqueante&lt;br&gt;• Dependência de serviço externo&lt;br&gt;&lt;br&gt;&lt;b&gt;Consequências:&lt;/b&gt;&lt;br&gt;• Usuário aguarda quase 1 segundo&lt;br&gt;• Timeout risk se gateway falhar&lt;br&gt;• Escalabilidade limitada pela API externa&lt;br&gt;• SLA comprometido (target: &amp;lt;500ms)&lt;br&gt;&lt;br&gt;&lt;b&gt;Criticidade:&lt;/b&gt; 🔴 ALTA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1688" width="305" height="132" as="geometry" />
+        </mxCell>
+        
+        <!-- Solutions -->
+        <mxCell id="solutions-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#006400;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="435" y="1652" width="325" height="175" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="solutions-title" value="&lt;b&gt;✅ SOLUÇÕES RECOMENDADAS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1660" width="295" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="solutions-content" value="&lt;b&gt;1. Processamento Assíncrono:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;• Enviar pagamento para fila Kafka&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;• Retornar &quot;pending&quot; imediatamente ao usuário&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;• Processar pagamento em background worker&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;• Notificar via webhook quando concluído&lt;br&gt;&lt;br&gt;&lt;b&gt;2. Circuit Breaker:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;• Implementar Hystrix/Resilience4j&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;• Fallback: retornar status &quot;processing&quot;&lt;br&gt;&lt;br&gt;&lt;b&gt;3. Timeout Agressivo:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;• Reduzir timeout: 987ms → 300ms&lt;br&gt;&lt;br&gt;&lt;b&gt;Resultado esperado:&lt;/b&gt; Latência total &amp;lt; 300ms" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="445" y="1688" width="305" height="132" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== METADATA =============== -->
+        <mxCell id="metadata-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1890" width="710" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="metadata-title" value="&lt;b&gt;METADADOS DO TRACE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="1900" width="250" height="18" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="metadata-content" value="&lt;b&gt;Trace ID:&lt;/b&gt; abc123-def456-789ghi&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Parent Span:&lt;/b&gt; N/A (root)&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Baggage:&lt;/b&gt; customer_tier=premium, region=us-east-1&lt;br&gt;&lt;br&gt;&lt;b&gt;Tags:&lt;/b&gt; http.method=POST, http.url=/api/orders, http.status_code=201, order.id=50234, user.id=8472&lt;br&gt;&lt;br&gt;&lt;b&gt;Instrumentation:&lt;/b&gt; OpenTelemetry 1.20.0&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Backend:&lt;/b&gt; Jaeger UI&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&lt;b&gt;Sampling:&lt;/b&gt; 100% (debug mode)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1925" width="660" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- Footer -->
+        <mxCell id="footer" value="🔗 &lt;b&gt;Traços distribuídos revelam o fluxo completo de requisições através de múltiplos serviços, permitindo identificar gargalos e otimizar performance.&lt;/b&gt;" style="text;html=1;strokeColor=#000000;fillColor=#e0e0e0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2040" width="650" height="40" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

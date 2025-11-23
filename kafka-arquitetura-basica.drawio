@@ -1,0 +1,244 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="Arquitetura Kafka" id="kafka-architecture-diagram">
+    <mxGraphModel dx="1477" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Arquitetura Básica do Apache Kafka&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="125" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Produtores, Brokers, Tópicos e Consumidores" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="225" y="70" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="120" as="sourcePoint" />
+            <mxPoint x="750" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="producers-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CAMADA DE PRODUÇÃO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="275" y="140" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer1" value="&lt;b&gt;PRODUCER 1&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Aplicação Web&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="120" y="190" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="producer2" value="&lt;b&gt;PRODUCER 2&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Microserviço&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="360" y="190" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="producer3" value="&lt;b&gt;PRODUCER 3&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Sensor IoT&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="600" y="190" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p1" value="&lt;b&gt;publish()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="producer1" target="kafka-cluster-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p2" value="&lt;b&gt;publish()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="producer2" target="kafka-cluster-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p3" value="&lt;b&gt;publish()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="producer3" target="kafka-cluster-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-cluster-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="100" y="320" width="650" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;KAFKA CLUSTER&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="300" y="330" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="broker1-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="130" y="380" width="180" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="broker1-title" value="&lt;b&gt;BROKER 1&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="160" y="390" width="120" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="b1-topic-a" value="&lt;b&gt;Tópico: pedidos&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="145" y="425" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b1-partition-0" value="Partition 0 (Leader)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="145" y="455" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="b1-topic-b" value="&lt;b&gt;Tópico: usuarios&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="145" y="500" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b1-partition-1" value="Partition 1 (Follower)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="145" y="530" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="b1-storage" value="💾 Disco" style="text;html=1;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="165" y="575" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="broker2-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="335" y="380" width="180" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="broker2-title" value="&lt;b&gt;BROKER 2&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="365" y="390" width="120" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="b2-topic-a" value="&lt;b&gt;Tópico: pedidos&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="350" y="425" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b2-partition-0" value="Partition 1 (Leader)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="350" y="455" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="b2-topic-b" value="&lt;b&gt;Tópico: usuarios&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="350" y="500" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b2-partition-1" value="Partition 0 (Leader)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="350" y="530" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="b2-storage" value="💾 Disco" style="text;html=1;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="575" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="broker3-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="540" y="380" width="180" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="broker3-title" value="&lt;b&gt;BROKER 3&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="570" y="390" width="120" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="b3-topic-a" value="&lt;b&gt;Tópico: pedidos&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="555" y="425" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b3-partition-0" value="Partition 0 (Follower)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="555" y="455" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="b3-topic-b" value="&lt;b&gt;Tópico: usuarios&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="555" y="500" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b3-partition-1" value="Partition 1 (Follower)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="555" y="530" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="b3-storage" value="💾 Disco" style="text;html=1;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="575" y="575" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="repl-arrow-1" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=3 3;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="broker1-box" target="broker2-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="500" as="sourcePoint" />
+            <mxPoint x="335" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repl-text-1" value="Replicação" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" parent="1" vertex="1">
+          <mxGeometry x="300" y="490" width="70" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="repl-arrow-2" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=3 3;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="broker2-box" target="broker3-box" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="515" y="500" as="sourcePoint" />
+            <mxPoint x="540" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repl-text-2" value="Replicação" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" parent="1" vertex="1">
+          <mxGeometry x="505" y="490" width="70" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="log-section-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="130" y="650" width="590" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="log-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;LOG DE PERSISTÊNCIA (Estrutura Append-Only)&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="220" y="660" width="410" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="log-subtitle" value="Mensagens são escritas sequencialmente e nunca são modificadas" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="220" y="690" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="log-visual-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="160" y="714" width="530" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="log-offset-label" value="&lt;b&gt;Offset:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="170" y="724" width="50" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="170" y="744" width="90" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-0-offset" value="&lt;b&gt;0&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="170" y="749" width="90" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-0-data" value="pedido_123&lt;br&gt;valor: 150.00&lt;br&gt;timestamp" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="175" y="769" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="744" width="90" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-1-offset" value="&lt;b&gt;1&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="270" y="749" width="90" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-1-data" value="usuario_456&lt;br&gt;nome: João&lt;br&gt;timestamp" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="275" y="769" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="744" width="90" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-2-offset" value="&lt;b&gt;2&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="370" y="749" width="90" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-2-data" value="pedido_789&lt;br&gt;valor: 320.00&lt;br&gt;timestamp" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="375" y="769" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="470" y="744" width="90" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-3-offset" value="&lt;b&gt;3&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="470" y="749" width="90" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="log-msg-3-data" value="usuario_321&lt;br&gt;nome: Maria&lt;br&gt;timestamp" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="475" y="769" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="log-append-arrow" value="➜" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="570" y="769" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="log-append-text" value="&lt;b&gt;Novas&lt;br&gt;mensagens&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="610" y="774" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="log-info" value="✓ Mensagens NUNCA são deletadas (até expirar retention)&lt;br&gt;✓ Cada mensagem tem um OFFSET único e sequencial&lt;br&gt;✓ Consumidores controlam seu próprio offset de leitura" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="170" y="847" width="510" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumers-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CAMADA DE CONSUMO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="275" y="940" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c1" value="&lt;b&gt;poll()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="kafka-cluster-box" target="consumer1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c2" value="&lt;b&gt;poll()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="kafka-cluster-box" target="consumer2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c3" value="&lt;b&gt;poll()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;fontSize=10;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="kafka-cluster-box" target="consumer3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-group-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1000" width="650" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-group-label" value="&lt;b&gt;CONSUMER GROUP: &quot;analytics-group&quot;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="275" y="1010" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer1" value="&lt;b&gt;CONSUMER 1&lt;/b&gt;&lt;br&gt;&lt;font&gt;Dashboard Analytics&lt;/font&gt;&lt;br&gt;&lt;font&gt;Lendo Partition 0&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1045" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer2" value="&lt;b&gt;CONSUMER 2&lt;/b&gt;&lt;br&gt;&lt;font&gt;Email Service&lt;/font&gt;&lt;br&gt;&lt;font&gt;Lendo Partition 1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="350" y="1045" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer3" value="&lt;b&gt;CONSUMER 3&lt;/b&gt;&lt;br&gt;&lt;font&gt;Data Warehouse&lt;/font&gt;&lt;br&gt;&lt;font&gt;Lendo Ambas Partitions&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1045" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="features-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1160" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="features-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;CARACTERÍSTICAS DA ARQUITETURA&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="240" y="1170" width="350" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="feat1" value="📝 &lt;b&gt;PRODUTORES:&lt;/b&gt; Publicam mensagens em tópicos usando a API publish()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1205" width="590" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feat2" value="💾 &lt;b&gt;BROKERS:&lt;/b&gt; Armazenam mensagens em disco de forma persistente e replicada" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1230" width="590" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feat3" value="📋 &lt;b&gt;TÓPICOS:&lt;/b&gt; Organizam mensagens em categorias lógicas (ex: pedidos, usuarios)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1255" width="590" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feat4" value="🔀 &lt;b&gt;PARTIÇÕES:&lt;/b&gt; Dividem tópicos para paralelismo e alta disponibilidade (Leader/Follower)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1280" width="590" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="feat5" value="👥 &lt;b&gt;CONSUMIDORES:&lt;/b&gt; Leem mensagens usando poll() e controlam seu próprio offset" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1305" width="590" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1380" width="650" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-text" value="&lt;b&gt;&lt;font&gt;FLUXO COMPLETO:&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font&gt;Produtores → Tópicos (distribuídos em Partições) → Brokers (persistência em disco) → Consumidores&lt;br&gt;✓ Alta disponibilidade   ✓ Escalabilidade horizontal   ✓ Persistência durável&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1392" width="610" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

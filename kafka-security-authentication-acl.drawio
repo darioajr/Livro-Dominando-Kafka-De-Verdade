@@ -1,0 +1,217 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram id="kafka-security-auth" name="Kafka Security Authentication">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Autenticação e Autorização Kafka&#xa;SASL/SSL + ACLs" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="20" width="400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="client" value="Cliente Kafka&#xa;(Producer/Consumer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="120" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="broker" value="Kafka Broker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="600" y="265" width="150" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="step1-label" value="1. TENTATIVA DE CONEXÃO" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="80" y="230" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="175" y="190" as="sourcePoint" />
+            <mxPoint x="175" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step1-box" value="Cliente inicia conexão&#xa;com Broker na porta 9093&#xa;(SSL/TLS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=15;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5" parent="1" vertex="1">
+          <mxGeometry x="80" y="270" width="200" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow2" value="Conexão SSL/TLS" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1;dashed=1;dashPattern=8 4" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="300" as="sourcePoint" />
+            <mxPoint x="600" y="300" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step2-label" value="2. HANDSHAKE SSL/TLS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="310" y="350" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-box" value="• Troca de certificados&lt;br&gt;• Verificação de identidade&lt;br&gt;• Estabelecimento de canal criptografado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5" parent="1" vertex="1">
+          <mxGeometry x="310" y="380" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow3-client" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;endFill=0;startArrow=classic;startFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="400" as="sourcePoint" />
+            <mxPoint x="310" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow3-broker" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;endFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="400" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow3-return-broker" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;endFill=0;startArrow=classic;startFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="430" as="sourcePoint" />
+            <mxPoint x="600" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow3-return-client" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;endFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="430" as="sourcePoint" />
+            <mxPoint x="280" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step3-label" value="3. AUTENTICAÇÃO SASL" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="540" y="500" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step3-box" value="Mecanismos SASL:&#xa;• PLAIN (usuário/senha)&#xa;• SCRAM-SHA-256/512&#xa;• GSSAPI (Kerberos)&#xa;• OAUTHBEARER" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5" parent="1" vertex="1">
+          <mxGeometry x="540" y="530" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" value="Credenciais SASL" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="560" as="sourcePoint" />
+            <mxPoint x="540" y="560" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="auth-server" value="Servidor de&#xa;Autenticação&#xa;(LDAP/Kerberos)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontStyle=1;dashed=1;dashPattern=4 4" parent="1" vertex="1">
+          <mxGeometry x="600" y="670" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow5" value="Validação" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;endFill=1;startArrow=classic;startFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="675" y="630" as="sourcePoint" />
+            <mxPoint x="675" y="670" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step4-label" value="4. RESULTADO DA AUTENTICAÇÃO" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="80" y="780" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step4-success" value="✓ Autenticação bem-sucedida" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=14;align=center" parent="1" vertex="1">
+          <mxGeometry x="280" y="810" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow6" value="Token de sessão" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1;dashed=1;dashPattern=8 4;entryX=1.015;entryY=0.921;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" target="step1-box">
+          <mxGeometry y="16" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="704.5" as="sourcePoint" />
+            <mxPoint x="340" y="704.5" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step5-label" value="5. VERIFICAÇÃO DE PERMISSÕES (ACL)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="80" y="900" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step5-box" value="Cliente tenta operação:&#xa;PRODUZIR em tópico &quot;pedidos&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5" parent="1" vertex="1">
+          <mxGeometry x="80" y="930" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow7" value="Requisição" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="960" as="sourcePoint" />
+            <mxPoint x="480" y="960" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="acl-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="480" y="910" width="290" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="acl-label" value="MÓDULO ACL DO BROKER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="490" y="920" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="acl-check1" value="1. Identificar usuário autenticado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=left;spacingLeft=5" parent="1" vertex="1">
+          <mxGeometry x="500" y="950" width="250" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="acl-check2" value="2. Consultar ACLs para o tópico &quot;pedidos&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=left;spacingLeft=5" parent="1" vertex="1">
+          <mxGeometry x="500" y="985" width="250" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="acl-check3" value="3. Verificar permissão WRITE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=left;spacingLeft=5" parent="1" vertex="1">
+          <mxGeometry x="500" y="1020" width="250" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="acl-check4" value="4. Permitir/Negar operação" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=12;align=left;spacingLeft=5" parent="1" vertex="1">
+          <mxGeometry x="500" y="1055" width="250" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="acl-example-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="80" y="1010" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="acl-example-title" value="Exemplo de ACL:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="90" y="1015" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="acl-example-text" value="Principal: User:producer-app&#xa;Operation: WRITE&#xa;Resource: Topic:pedidos&#xa;Permission: ALLOW" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;fontFamily=Courier New" parent="1" vertex="1">
+          <mxGeometry x="100" y="1035" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="step6-label" value="6. RESULTADO DA AUTORIZAÇÃO" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="80" y="1220" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-box" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="350" y="1180" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-label" value="Permissão&#xa;concedida?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="375" y="1215" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow8-yes" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="1230" as="sourcePoint" />
+            <mxPoint x="350" y="1230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow9-yes" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1230" as="sourcePoint" />
+            <mxPoint x="600" y="1230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-yes" value="SIM" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="510" y="1210" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="success-box" value="✓ Operação permitida&#xa;Mensagem publicada" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=10;align=center" parent="1" vertex="1">
+          <mxGeometry x="600" y="1205" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow8-no" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="425" y="1280" as="sourcePoint" />
+            <mxPoint x="425" y="1320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-no" value="NÃO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="430" y="1280" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="deny-box" value="✗ Operação negada&#xa;Authorization Exception" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=10;align=center;arcSize=0;" parent="1" vertex="1">
+          <mxGeometry x="350" y="1320" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow10-deny" value="Erro retornado" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1;dashed=1;dashPattern=8 4" parent="1" edge="1">
+          <mxGeometry x="1" y="-15" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="1345" as="sourcePoint" />
+            <mxPoint x="280" y="1345" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="summary-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="60" y="1410" width="730" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-title" value="CAMADAS DE SEGURANÇA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="300" y="1420" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-layer1" value="1. Criptografia (SSL/TLS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=13;align=left;spacingLeft=10" parent="1" vertex="1">
+          <mxGeometry x="80" y="1450" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-desc1" value="Protege dados em trânsito" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1485" width="200" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-layer2" value="2. Autenticação (SASL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=13;align=left;spacingLeft=10" parent="1" vertex="1">
+          <mxGeometry x="310" y="1450" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-desc2" value="Verifica identidade do cliente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1485" width="200" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-layer3" value="3. Autorização (ACL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=13;align=left;spacingLeft=10" parent="1" vertex="1">
+          <mxGeometry x="540" y="1450" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-desc3" value="Controla permissões de acesso" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="540" y="1485" width="200" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="footer-note" value="Fluxo completo de segurança Kafka: cada requisição passa por autenticação e autorização&#xa;antes de ser processada, garantindo acesso seguro e controlado aos recursos." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="100" y="1550" width="650" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

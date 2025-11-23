@@ -1,0 +1,229 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram id="telecom-kafka-arch" name="Telecom Kafka Architecture">
+    <mxGraphModel dx="984" dy="572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Arquitetura Telecom com Kafka" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="20" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="producers-label" value="PRODUTORES DE EVENTOS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="275" y="80" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-network" value="Sistema de&#xa;Eventos de Rede" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="70" y="130" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-billing" value="Sistema de&#xa;Cobrança" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="280" y="130" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-data-usage" value="Sistema de&#xa;Uso de Dados" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="490" y="130" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-calls" value="Sistema de&#xa;Chamadas/SMS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="650" y="130" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-network-topic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1" parent="1" source="producer-network" target="topic-network" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-billing-topic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1" parent="1" source="producer-billing" target="topic-billing" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-data-usage-topic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1" parent="1" source="producer-data-usage" target="topic-data-usage" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-calls-topic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1" parent="1" source="producer-calls" target="topic-calls" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-cluster-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;dashed=1;dashPattern=8 8" parent="1" vertex="1">
+          <mxGeometry x="40" y="250" width="770" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-label" value="APACHE KAFKA CLUSTER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="300" y="260" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-network" value="Tópico:&#xa;network-events" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="310" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-billing" value="Tópico:&#xa;billing-events" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="295" y="310" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-data-usage" value="Tópico:&#xa;data-usage-events" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="505" y="310" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-calls" value="Tópico:&#xa;calls-sms-events" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="665" y="310" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-quality" value="Tópico:&#xa;quality-monitoring" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="85" y="460" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-invoicing" value="Tópico:&#xa;invoicing-data" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="295" y="460" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-customer-support" value="Tópico:&#xa;customer-support" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="505" y="460" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="topic-analytics" value="Tópico:&#xa;usage-analytics" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="665" y="460" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-network-quality" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;strokeWidth=1;endArrow=classic;endFill=1;dashed=1" parent="1" source="topic-network" target="topic-quality" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-billing-invoicing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;strokeWidth=1;endArrow=classic;endFill=1;dashed=1" parent="1" source="topic-billing" target="topic-invoicing" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-data-usage-invoicing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;strokeWidth=1;endArrow=classic;endFill=1;dashed=1" parent="1" source="topic-data-usage" target="topic-invoicing" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="430" />
+              <mxPoint x="345" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-calls-invoicing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;strokeWidth=1;endArrow=classic;endFill=1;dashed=1" parent="1" source="topic-calls" target="topic-invoicing" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="715" y="430" />
+              <mxPoint x="345" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-network-support" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;strokeWidth=1;endArrow=classic;endFill=1;dashed=1" parent="1" source="topic-network" target="topic-customer-support" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="135" y="420" />
+              <mxPoint x="555" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-calls-support" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;strokeWidth=1;endArrow=classic;endFill=1;dashed=1" parent="1" source="topic-calls" target="topic-customer-support" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="715" y="420" />
+              <mxPoint x="555" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-data-usage-analytics" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;strokeWidth=1;endArrow=classic;endFill=1;dashed=1" parent="1" source="topic-data-usage" target="topic-analytics" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="440" />
+              <mxPoint x="715" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumers-label" value="CONSUMIDORES DE EVENTOS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="275" y="610" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-invoicing" value="Sistema de&#xa;Faturamento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="80" y="660" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-quality" value="Sistema de&#xa;Monitoramento de&#xa;Qualidade" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="280" y="660" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-support" value="Sistema de&#xa;Suporte ao Cliente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="484" y="660" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-analytics" value="Sistema de&#xa;Analytics e BI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="643" y="660" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-invoicing-consumer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1" parent="1" source="topic-invoicing" target="consumer-invoicing" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="345" y="590" />
+              <mxPoint x="150" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-quality-consumer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1" parent="1" source="topic-quality" target="consumer-quality" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="135" y="590" />
+              <mxPoint x="350" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-support-consumer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1" parent="1" source="topic-customer-support" target="consumer-support" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-invoicing-sub" value="Consome:&#xa;cobrança, uso, chamadas" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="80" y="730" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label-quality-sub" value="Consome:&#xa;eventos de rede" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="280" y="740" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label-support-sub" value="Consome:&#xa;rede, chamadas" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="480" y="730" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label-analytics-sub" value="Consome:&#xa;uso de dados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" parent="1" vertex="1">
+          <mxGeometry x="650" y="730" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="performance-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="60" y="800" width="730" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="performance-label" value="CARACTERÍSTICAS DA ARQUITETURA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="250" y="810" width="350" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="performance-latency" value="• Baixa latência (ms)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="100" y="840" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="performance-scale" value="• Alta escalabilidade" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="300" y="840" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="performance-realtime" value="• Processamento em tempo real" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="500" y="840" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="60" y="910" width="730" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="LEGENDA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="350" y="920" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-arrow-solid" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;endFill=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="960" as="sourcePoint" />
+            <mxPoint x="170" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-arrow-solid-label" value="Publicação direta" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="180" y="950" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-arrow-dashed" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;endFill=1;dashed=1" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="990" as="sourcePoint" />
+            <mxPoint x="170" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-arrow-dashed-label" value="Agregação/transformação" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="180" y="980" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-cylinder" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=5;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2" parent="1" vertex="1">
+          <mxGeometry x="420" y="950" width="40" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-cylinder-label" value="Tópicos Kafka" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="470" y="965" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-system" value="Sistema" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="600" y="960" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-system-label" value="Produtores&lt;div&gt;Consumidores&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="690" y="965" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="footer-note" value="Processamento de milhões de eventos de rede por segundo com baixa latência.&#xa;Integração entre sistemas de rede, billing e suporte para operação telecom eficiente." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="100" y="1050" width="650" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="35kJhJ07J7DFlJAm_Y42-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;strokeWidth=2;endArrow=classic;endFill=1;entryX=0.552;entryY=0.006;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="consumer-analytics">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720.49" y="540" as="sourcePoint" />
+            <mxPoint x="721" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="721" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

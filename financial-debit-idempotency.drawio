@@ -1,0 +1,188 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="Financial Idempotency Flow" id="financial-idempotency-diagram">
+    <mxGraphModel dx="1153" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="2000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Idempotência em Sistema Financeiro&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="30" width="650" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Prevenção de Débito Duplicado via Transaction ID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="175" y="70" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="120" as="sourcePoint" />
+            <mxPoint x="780" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="producer-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="70" y="150" width="710" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-title" value="&lt;b&gt;1. PRODUCER: SISTEMA DE PAGAMENTOS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="90" y="165" width="400" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="205" width="640" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-label" value="&lt;b&gt;Payment Gateway&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="215" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="producer-action" value="Cliente solicita débito de R$ 500,00&lt;br&gt;&lt;font&gt;Gera &lt;b&gt;transaction_id&lt;/b&gt; único: &lt;/font&gt;&lt;font face=&quot;Courier New&quot;&gt;&quot;txn-2024-abc-xyz-123&quot;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="120" y="240" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-producer-kafka" value="&lt;b&gt;publish()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=4;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="producer-section" target="kafka-section" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="330" width="710" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;2. KAFKA TOPIC: financial.debit&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="345" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="message-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="375" width="640" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="message-title" value="&lt;b&gt;Mensagem Publicada&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="115" y="375" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="message-content" value="&lt;font face=&quot;Courier New&quot;&gt;{&lt;br&gt;  &quot;transaction_id&quot;: &quot;txn-2024-abc-xyz-123&quot;,  &lt;b&gt;&amp;lt;-- Chave de Idempotência&lt;/b&gt;&lt;br&gt;  &quot;account_from&quot;: &quot;12345-6&quot;,&lt;br&gt;  &quot;amount&quot;: 500.00,&lt;br&gt;  &quot;currency&quot;: &quot;BRL&quot;,&lt;br&gt;  &quot;timestamp&quot;: &quot;2024-11-16T10:30:00Z&quot;&lt;br&gt;}&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="125" y="390" width="600" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-consumer" value="&lt;b&gt;consume()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=4;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="kafka-section" target="consumer-section" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="560" width="710" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="consumer-title" value="&lt;b&gt;3. CONSUMER: SERVIÇO DE DÉBITO COM VERIFICAÇÃO DE IDEMPOTÊNCIA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="100" y="580" width="650" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="step1-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="620" width="640" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step1-label" value="&lt;b&gt;PASSO 1:&lt;/b&gt; Recebe mensagem com &lt;font face=&quot;Courier New&quot;&gt;transaction_id = &quot;txn-2024-abc-xyz-123&quot;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="115" y="635" width="600" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-step1-2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="step1-box" target="step2-box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="690" width="640" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-title" value="&lt;b&gt;PASSO 2: VERIFICAÇÃO DE IDEMPOTÊNCIA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="235" y="700" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="step2-query" value="&lt;font face=&quot;Courier New&quot;&gt;SELECT * FROM processed_transactions WHERE transaction_id = &#39;txn-2024-abc-xyz-123&#39;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="120" y="730" width="600" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-step2-decision" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="step2-box" target="decision-diamond" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-diamond" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="320" y="790" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="decision-label" value="&lt;b&gt;Transaction ID&lt;br&gt;já processado?&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="345" y="830" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-no" value="&lt;b&gt;NÃO&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;fontSize=12;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="decision-diamond" edge="1" target="path-no-box">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="path-no-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="950" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="path-no-title" value="&lt;b&gt;✓ PROCESSAR DÉBITO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#006400;" parent="1" vertex="1">
+          <mxGeometry x="120" y="960" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="path-no-steps" value="1. Executa débito na conta&lt;br&gt;2. Registra &lt;font face=&quot;Courier New&quot;&gt;transaction_id&lt;/font&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;na tabela de controle&lt;br&gt;3. Confirma operação&lt;br&gt;4. Retorna sucesso" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="120" y="990" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-yes" value="&lt;b&gt;SIM&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;fontSize=12;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="decision-diamond" edge="1" target="path-yes-box">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="path-yes-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="540" y="950" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="path-yes-title" value="&lt;b&gt;⚠ REJEITAR DUPLICATA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#8B0000;" parent="1" vertex="1">
+          <mxGeometry x="555" y="960" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="path-yes-steps" value="1. Detecta transação duplicada&lt;br&gt;2. NÃO executa débito&lt;br&gt;3. Loga tentativa duplicada&lt;br&gt;4. Retorna resposta:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;i&gt;já processado anteriormente&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="555" y="990" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="store-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1170" width="710" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="store-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;4. ARMAZENAMENTO DE IDEMPOTÊNCIA&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="1180" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="store-table" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1211" width="640" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="store-table-title" value="&lt;b&gt;Tabela: processed_transactions&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="300" y="1223.5" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="store-table-header" value="&lt;font face=&quot;Courier New&quot;&gt;&lt;b&gt;transaction_id&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;processed_at&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;amount&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;status&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#e0e0e0;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="115" y="1253.5" width="610" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="store-table-row1" value="&lt;font face=&quot;Courier New&quot;&gt;txn-2024-abc-xyz-123&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;2024-11-16 10:30:15&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;500.00&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SUCCESS&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="115" y="1278.5" width="610" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="store-table-row2" value="&lt;font face=&quot;Courier New&quot;&gt;txn-2024-def-uvw-456&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;2024-11-16 10:25:03&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;250.00&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SUCCESS&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="115" y="1293.5" width="610" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="store-note" value="💾 Pode ser implementado com: Redis, PostgreSQL, MongoDB ou qualquer banco com suporte a chaves únicas" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#ffffff;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="120" y="1325" width="600" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="benefits-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1400" width="710" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="benefits-title" value="&lt;b&gt;BENEFÍCIOS DA IDEMPOTÊNCIA EM SISTEMAS FINANCEIROS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="175" y="1415" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="1455" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit1-text" value="&lt;b&gt;🔒 Segurança Financeira&lt;/b&gt;&lt;br&gt;Evita débitos duplicados, garantindo que cada transação seja processada apenas uma vez, mesmo com retries ou falhas de rede" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1458" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="1455" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit2-text" value="&lt;b&gt;🔄 Retry Seguro&lt;/b&gt;&lt;br&gt;Permite que o sistema faça múltiplas tentativas de processamento sem risco de duplicação, aumentando a resiliência" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1465" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="1530" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit3-text" value="&lt;b&gt;📊 Auditoria e Compliance&lt;/b&gt;&lt;br&gt;Registro histórico de todas as tentativas de transação facilita auditoria e atende requisitos regulatórios" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1540" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="1530" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit4-text" value="&lt;b&gt;⚡ Performance e Escalabilidade&lt;/b&gt;&lt;br&gt;Verificação rápida via índice único permite alta throughput sem comprometer a consistência dos dados" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1540" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="impl-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1650" width="710" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="impl-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;IMPLEMENTAÇÃO - EXEMPLO DE CÓDIGO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="1660" width="400" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="impl-code" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1683" width="640" height="187" as="geometry" />
+        </mxCell>
+        <mxCell id="impl-code-text" value="&lt;font face=&quot;Courier New&quot;&gt;async def process_debit(message):&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;transaction_id = message[&#39;transaction_id&#39;]&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;# Verifica se já foi processado&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;if redis.exists(f&quot;txn:{transaction_id}&quot;):&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;logger.warning(f&quot;Duplicate transaction detected: {transaction_id}&quot;)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return {&#39;status&#39;: &#39;already_processed&#39;, &#39;transaction_id&#39;: transaction_id}&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;# Processa débito&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;result = execute_debit(message[&#39;account_from&#39;], message[&#39;amount&#39;])&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;# Registra como processado (TTL de 7 dias)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;redis.setex(f&quot;txn:{transaction_id}&quot;, 604800, &#39;processed&#39;)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return {&#39;status&#39;: &#39;success&#39;, &#39;transaction_id&#39;: transaction_id}&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1688" width="620" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="⚠️ &lt;b&gt;CRÍTICO:&lt;/b&gt; Em sistemas financeiros, a idempotência não é opcional - é uma necessidade regulatória e de segurança" style="text;html=1;strokeColor=#000000;fillColor=#e0e0e0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=2;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1904" width="650" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

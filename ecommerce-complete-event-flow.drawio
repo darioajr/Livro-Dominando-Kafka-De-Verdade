@@ -1,0 +1,469 @@
+<mxfile host="app.diagrams.net" modified="2025-11-16T00:00:00.000Z" agent="5.0" version="22.1.11" etag="drawio-ecommerce-event-flow" type="device">
+  <diagram name="E-commerce Event Flow" id="ecommerce-event-flow-diagram">
+    <mxGraphModel dx="1422" dy="2400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="2400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Título Principal -->
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Fluxo de Eventos: Sistema E-commerce&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="650" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="subtitle" value="Event-Driven Architecture com Kafka Topics" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="175" y="70" width="500" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Linha Divisória -->
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="120" as="sourcePoint" />
+            <mxPoint x="780" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- =============== EVENTO 1: PEDIDO CRIADO =============== -->
+        <mxCell id="event1-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="710" height="630" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="event1-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;EVENTO 1: PEDIDO CRIADO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="275" y="165" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Producer Order -->
+        <mxCell id="producer-order" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="210" width="310" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="producer-order-label" value="&lt;b&gt;ORDER SERVICE&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Cliente finaliza compra&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="295" y="225" width="260" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Seta Producer -> Topic -->
+        <mxCell id="arrow-order-topic" value="&lt;b&gt;publish()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="producer-order" target="topic-order-created">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Topic Order Created -->
+        <mxCell id="topic-order-created" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="320" width="350" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="topic-order-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;KAFKA TOPIC: order.created&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="275" y="335" width="300" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="topic-order-event" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="375" width="310" height="55" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="topic-order-content" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 8px;&quot;&gt;{&lt;br&gt;  &quot;order_id&quot;: &quot;ORD-12345&quot;, &quot;customer_id&quot;: &quot;CUST-789&quot;,&lt;br&gt;  &quot;items&quot;: [{&quot;sku&quot;: &quot;PROD-001&quot;, &quot;qty&quot;: 2, &quot;price&quot;: 50.00}],&lt;br&gt;  &quot;total&quot;: 100.00, &quot;timestamp&quot;: &quot;2024-11-16T10:00:00Z&quot;&lt;br&gt;}&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="280" y="380" width="290" height="45" as="geometry" />
+        </mxCell>
+        
+        <!-- Setas para Consumers -->
+        <mxCell id="arrow-order-consumer1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topic-order-created" target="consumer-order1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-order-consumer2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topic-order-created" target="consumer-order2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-order-consumer3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topic-order-created" target="consumer-order3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Consumer 1: Inventory -->
+        <mxCell id="consumer-order1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="480" width="180" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order1-title" value="&lt;b&gt;INVENTORY SERVICE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="115" y="490" width="150" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order1-action" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="115" y="525" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order1-steps" value="1. Verifica disponibilidade&lt;br&gt;2. Reserva produtos&lt;br&gt;3. Atualiza estoque&lt;br&gt;4. Bloqueia itens para pedido" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="120" y="550" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order1-result" value="&lt;b&gt;Resultado:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="115" y="620" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order1-output" value="✓ Estoque reservado&lt;br&gt;✓ Produtos bloqueados&lt;br&gt;✓ Status: RESERVED" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="120" y="645" width="150" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order1-db" value="💾 DB: inventory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="115" y="705" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Consumer 2: Notification -->
+        <mxCell id="consumer-order2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="480" width="180" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order2-title" value="&lt;b&gt;NOTIFICATION SERVICE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="490" width="150" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order2-action" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="525" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order2-steps" value="1. Busca dados do cliente&lt;br&gt;2. Gera template de email&lt;br&gt;3. Envia confirmação&lt;br&gt;4. Registra notificação" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="330" y="550" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order2-result" value="&lt;b&gt;Resultado:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="620" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order2-output" value="✓ Email enviado&lt;br&gt;✓ Cliente notificado&lt;br&gt;✓ Status: SENT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="330" y="645" width="150" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order2-service" value="📧 Email Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="325" y="705" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Consumer 3: Analytics -->
+        <mxCell id="consumer-order3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="480" width="180" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order3-title" value="&lt;b&gt;ANALYTICS SERVICE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="535" y="490" width="150" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order3-action" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="535" y="525" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order3-steps" value="1. Registra evento&lt;br&gt;2. Calcula métricas&lt;br&gt;3. Atualiza dashboards&lt;br&gt;4. Gera relatórios" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="540" y="550" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order3-result" value="&lt;b&gt;Resultado:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="535" y="620" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order3-output" value="✓ Métricas atualizadas&lt;br&gt;✓ Dashboard atualizado&lt;br&gt;✓ Status: PROCESSED" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="540" y="645" width="150" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-order3-db" value="📊 Data Warehouse" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="535" y="705" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== EVENTO 2: PAGAMENTO REALIZADO =============== -->
+        <mxCell id="event2-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="830" width="710" height="630" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="event2-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;EVENTO 2: PAGAMENTO REALIZADO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="250" y="845" width="350" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Producer Payment -->
+        <mxCell id="producer-payment" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="890" width="310" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="producer-payment-label" value="&lt;b&gt;PAYMENT SERVICE&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Pagamento aprovado pelo gateway&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="295" y="905" width="260" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Seta Producer -> Topic -->
+        <mxCell id="arrow-payment-topic" value="&lt;b&gt;publish()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="producer-payment" target="topic-payment-completed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Topic Payment Completed -->
+        <mxCell id="topic-payment-completed" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1000" width="350" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="topic-payment-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;KAFKA TOPIC: payment.completed&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="275" y="1015" width="300" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="topic-payment-event" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1055" width="310" height="55" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="topic-payment-content" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 8px;&quot;&gt;{&lt;br&gt;  &quot;payment_id&quot;: &quot;PAY-67890&quot;, &quot;order_id&quot;: &quot;ORD-12345&quot;,&lt;br&gt;  &quot;amount&quot;: 100.00, &quot;method&quot;: &quot;CREDIT_CARD&quot;,&lt;br&gt;  &quot;status&quot;: &quot;APPROVED&quot;, &quot;timestamp&quot;: &quot;2024-11-16T10:05:00Z&quot;&lt;br&gt;}&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1060" width="290" height="45" as="geometry" />
+        </mxCell>
+        
+        <!-- Setas para Consumers -->
+        <mxCell id="arrow-payment-consumer1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topic-payment-completed" target="consumer-payment1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-payment-consumer2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topic-payment-completed" target="consumer-payment2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-payment-consumer3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topic-payment-completed" target="consumer-payment3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Consumer 1: Order -->
+        <mxCell id="consumer-payment1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1160" width="180" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment1-title" value="&lt;b&gt;ORDER SERVICE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="115" y="1170" width="150" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment1-action" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="115" y="1205" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment1-steps" value="1. Valida payment_id&lt;br&gt;2. Confirma pagamento&lt;br&gt;3. Atualiza status do pedido&lt;br&gt;4. Libera para fulfillment" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1230" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment1-result" value="&lt;b&gt;Resultado:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="115" y="1300" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment1-output" value="✓ Pagamento confirmado&lt;br&gt;✓ Pedido: CONFIRMED&lt;br&gt;✓ Pronto para envio" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1325" width="150" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment1-db" value="💾 DB: orders" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="115" y="1385" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Consumer 2: Billing -->
+        <mxCell id="consumer-payment2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="1160" width="180" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment2-title" value="&lt;b&gt;BILLING SERVICE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="1170" width="150" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment2-action" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="1205" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment2-steps" value="1. Registra transação&lt;br&gt;2. Gera nota fiscal&lt;br&gt;3. Emite recibo&lt;br&gt;4. Atualiza contabilidade" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1230" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment2-result" value="&lt;b&gt;Resultado:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="1300" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment2-output" value="✓ Nota fiscal gerada&lt;br&gt;✓ Recibo emitido&lt;br&gt;✓ Contabilizado" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1325" width="150" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment2-service" value="📄 ERP System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1385" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Consumer 3: Fraud Detection -->
+        <mxCell id="consumer-payment3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1160" width="180" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment3-title" value="&lt;b&gt;FRAUD DETECTION&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="535" y="1170" width="150" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment3-action" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="535" y="1205" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment3-steps" value="1. Analisa padrão de compra&lt;br&gt;2. Verifica score de risco&lt;br&gt;3. Detecta anomalias&lt;br&gt;4. Registra análise" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1230" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment3-result" value="&lt;b&gt;Resultado:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="535" y="1300" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment3-output" value="✓ Risco: BAIXO&lt;br&gt;✓ Transação validada&lt;br&gt;✓ Score atualizado" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1325" width="150" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-payment3-ml" value="🤖 ML Model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="535" y="1385" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== EVENTO 3: PRODUTO ENVIADO =============== -->
+        <mxCell id="event3-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1510" width="710" height="630" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="event3-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;EVENTO 3: PRODUTO ENVIADO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="250" y="1525" width="350" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Producer Shipping -->
+        <mxCell id="producer-shipping" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1570" width="310" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="producer-shipping-label" value="&lt;b&gt;SHIPPING SERVICE&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Produto despachado pelo centro de distribuição&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="295" y="1585" width="260" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Seta Producer -> Topic -->
+        <mxCell id="arrow-shipping-topic" value="&lt;b&gt;publish()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="producer-shipping" target="topic-product-shipped">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Topic Product Shipped -->
+        <mxCell id="topic-product-shipped" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1680" width="350" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="topic-shipping-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;KAFKA TOPIC: product.shipped&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="275" y="1695" width="300" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="topic-shipping-event" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1735" width="310" height="55" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="topic-shipping-content" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 8px;&quot;&gt;{&lt;br&gt;  &quot;shipment_id&quot;: &quot;SHIP-99999&quot;, &quot;order_id&quot;: &quot;ORD-12345&quot;,&lt;br&gt;  &quot;tracking_code&quot;: &quot;BR123456789&quot;, &quot;carrier&quot;: &quot;Correios&quot;,&lt;br&gt;  &quot;estimated_delivery&quot;: &quot;2024-11-20&quot;, &quot;timestamp&quot;: &quot;2024-11-16T14:00:00Z&quot;&lt;br&gt;}&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1740" width="290" height="45" as="geometry" />
+        </mxCell>
+        
+        <!-- Setas para Consumers -->
+        <mxCell id="arrow-shipping-consumer1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topic-product-shipped" target="consumer-shipping1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-shipping-consumer2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topic-product-shipped" target="consumer-shipping2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow-shipping-consumer3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topic-product-shipped" target="consumer-shipping3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Consumer 1: Order Update -->
+        <mxCell id="consumer-shipping1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1840" width="180" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping1-title" value="&lt;b&gt;ORDER SERVICE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="115" y="1850" width="150" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping1-action" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="115" y="1885" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping1-steps" value="1. Atualiza status do pedido&lt;br&gt;2. Registra código rastreio&lt;br&gt;3. Define data de entrega&lt;br&gt;4. Completa fulfillment" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1910" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping1-result" value="&lt;b&gt;Resultado:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="115" y="1980" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping1-output" value="✓ Status: SHIPPED&lt;br&gt;✓ Rastreio cadastrado&lt;br&gt;✓ Entrega: 2024-11-20" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="120" y="2005" width="150" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping1-db" value="💾 DB: orders" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="115" y="2065" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Consumer 2: Notification -->
+        <mxCell id="consumer-shipping2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="1840" width="180" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping2-title" value="&lt;b&gt;NOTIFICATION SERVICE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="1850" width="150" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping2-action" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="1885" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping2-steps" value="1. Prepara notificação&lt;br&gt;2. Inclui código rastreio&lt;br&gt;3. Envia SMS + Email&lt;br&gt;4. Envia push notification" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1910" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping2-result" value="&lt;b&gt;Resultado:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="325" y="1980" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping2-output" value="✓ Cliente notificado&lt;br&gt;✓ Rastreio enviado&lt;br&gt;✓ Multi-canal" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="330" y="2005" width="150" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping2-service" value="📱 Multi-channel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="325" y="2065" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Consumer 3: Inventory Release -->
+        <mxCell id="consumer-shipping3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1840" width="180" height="270" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping3-title" value="&lt;b&gt;INVENTORY SERVICE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="535" y="1850" width="150" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping3-action" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="535" y="1885" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping3-steps" value="1. Confirma envio&lt;br&gt;2. Remove reserva&lt;br&gt;3. Atualiza estoque físico&lt;br&gt;4. Registra movimentação" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1910" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping3-result" value="&lt;b&gt;Resultado:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="535" y="1980" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping3-output" value="✓ Reserva liberada&lt;br&gt;✓ Estoque atualizado&lt;br&gt;✓ Status: SHIPPED" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="540" y="2005" width="150" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="consumer-shipping3-db" value="💾 DB: inventory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="535" y="2065" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- =============== FLUXO COMPLETO =============== -->
+        <mxCell id="summary-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="2190" width="710" height="160" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="summary-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;FLUXO COMPLETO DO PEDIDO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="225" y="2205" width="400" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="summary1" value="1️⃣ &lt;b&gt;PEDIDO CRIADO&lt;/b&gt; → Estoque reservado, cliente notificado, métricas atualizadas" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2250" width="650" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="summary2" value="2️⃣ &lt;b&gt;PAGAMENTO REALIZADO&lt;/b&gt; → Pedido confirmado, nota fiscal gerada, fraude verificada" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2280" width="650" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="summary3" value="3️⃣ &lt;b&gt;PRODUTO ENVIADO&lt;/b&gt; → Status atualizado, cliente notificado com rastreio, estoque liberado" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2310" width="650" height="20" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

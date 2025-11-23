@@ -1,0 +1,243 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="Event-Driven Choreography" id="event-choreography-diagram">
+    <mxGraphModel dx="1336" dy="991" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Coreografia de Eventos: E-commerce&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="30" width="650" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Event-Driven Architecture com Reação Independente" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="175" y="70" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="divider1" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="120" as="sourcePoint" />
+            <mxPoint x="780" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="order-service-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="150" width="710" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="order-service-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;ORDER SERVICE (Event Producer)&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="165" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="order-service-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="210" width="640" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="order-service-label" value="&lt;b&gt;Cliente finaliza compra no website&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="280" y="217" width="290" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="order-service-action" value="1. Valida dados do pedido&lt;br&gt;2. Persiste pedido no banco de dados (status: PENDING)&lt;br&gt;3. Publica evento &lt;b&gt;&#39;OrderReceived&#39;&lt;/b&gt; para o Kafka&lt;br&gt;4. Retorna confirmação ao cliente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="120" y="229" width="600" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-order-kafka" value="&lt;b&gt;publish()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=4;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="order-service-section" target="kafka-bus" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-bus" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=4;" parent="1" vertex="1">
+          <mxGeometry x="70" y="370" width="710" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;KAFKA EVENT BUS&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="275" y="385" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-subtitle" value="Topic: order.events" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="300" y="415" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="event-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="440" width="640" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="event-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;EVENT: OrderReceived&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="280" y="460" width="290" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="event-content" value="&lt;font face=&quot;Courier New&quot;&gt;{&lt;br&gt;  &quot;event_type&quot;: &quot;OrderReceived&quot;,&lt;br&gt;  &quot;order_id&quot;: &quot;ORD-2024-12345&quot;,&lt;br&gt;  &quot;customer_id&quot;: &quot;CUST-789&quot;,&lt;br&gt;  &quot;items&quot;: [{&quot;product_id&quot;: &quot;PROD-001&quot;, &quot;quantity&quot;: 2, &quot;price&quot;: 50.00}],&lt;br&gt;  &quot;total_amount&quot;: 100.00,&lt;br&gt;  &quot;timestamp&quot;: &quot;2024-11-16T10:30:00Z&quot;&lt;br&gt;}&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="120" y="445" width="600" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-payment" value="&lt;b&gt;consume()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;fontSize=11;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.201;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="kafka-bus" target="consumers-section" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-inventory" value="&lt;b&gt;consume()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="kafka-bus" target="consumers-section" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-kafka-shipping" value="&lt;b&gt;consume()&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=3;fontSize=11;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.802;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="kafka-bus" target="consumers-section" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consumers-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="630" width="710" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="consumers-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;EVENT CONSUMERS (Reação Independente)&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="645" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="100" y="700" width="200" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;PAYMENT SERVICE&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="115" y="715" width="170" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-subtitle" value="&lt;i&gt;Processa pagamento&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="115" y="740" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-actions" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="115" y="775" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-actions-title" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="125" y="785" width="150" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-steps" value="1. Valida dados do cartão&lt;br&gt;2. Chama gateway de pagamento&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;(Stripe, PayPal, etc.)&lt;br&gt;3. Aguarda confirmação&lt;br&gt;4. Atualiza status do pedido&lt;br&gt;5. Publica evento:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&#39;PaymentProcessed&#39;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="125" y="805" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-result" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#006400;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="115" y="930" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-result-text" value="✅ &lt;b&gt;Status: APPROVED&lt;/b&gt;&lt;br&gt;💾 DB: payment_transactions" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#006400;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="125" y="935" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="325" y="700" width="200" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;INVENTORY SERVICE&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="340" y="715" width="170" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-subtitle" value="&lt;i&gt;Reserva produtos&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="340" y="740" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-actions" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="775" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-actions-title" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="350" y="785" width="150" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-steps" value="1. Verifica disponibilidade&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;dos produtos&lt;br&gt;2. Calcula estoque atual&lt;br&gt;3. Reserva itens para o pedido&lt;br&gt;4. Atualiza banco de dados&lt;br&gt;5. Publica evento:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&#39;InventoryReserved&#39;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="350" y="805" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-result" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#006400;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="340" y="930" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="inventory-result-text" value="✅ &lt;b&gt;Status: RESERVED&lt;/b&gt;&lt;br&gt;💾 DB: inventory" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#006400;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="350" y="935" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="shipping-service" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="550" y="700" width="200" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="shipping-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;SHIPPING SERVICE&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="565" y="715" width="170" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="shipping-subtitle" value="&lt;i&gt;Prepara envio&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="565" y="740" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="shipping-actions" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="565" y="775" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="shipping-actions-title" value="&lt;b&gt;Ações:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="785" width="150" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="shipping-steps" value="1. Valida endereço de entrega&lt;br&gt;2. Calcula frete e prazo&lt;br&gt;3. Gera etiqueta de envio&lt;br&gt;4. Cria ordem de separação&lt;br&gt;5. Notifica centro de distribuição&lt;br&gt;6. Publica evento:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&#39;ShippingPrepared&#39;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="575" y="805" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="shipping-result" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#006400;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="565" y="930" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="shipping-result-text" value="✅ &lt;b&gt;Status: READY_TO_SHIP&lt;/b&gt;&lt;br&gt;💾 DB: shipments" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#006400;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="575" y="935" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="additional-events" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1000" width="640" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="additional-events-title" value="&lt;b&gt;NOVOS EVENTOS PUBLICADOS (Continuação da Coreografia)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="175" y="1003" width="500" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="additional-events-content" value="• &lt;b&gt;PaymentProcessed&lt;/b&gt; → Gatilho para outros serviços (ex: Email de confirmação)&lt;br&gt;• &lt;b&gt;InventoryReserved&lt;/b&gt; → Atualização de dashboards, alertas de estoque baixo&lt;br&gt;• &lt;b&gt;ShippingPrepared&lt;/b&gt; → Notificação ao cliente, rastreamento ativado" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1022" width="600" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="additional-note" value="💡 Cada serviço pode publicar novos eventos, criando uma cadeia de reações em cascata" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="150" y="1069" width="550" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-payment-events" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" parent="1" source="payment-service" target="additional-events" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-inventory-events" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="inventory-service" target="additional-events" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-shipping-events" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" parent="1" source="shipping-service" target="additional-events" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="independent-note" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1105" width="640" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="independent-title" value="&lt;b&gt;⚡ CARACTERÍSTICA-CHAVE: INDEPENDÊNCIA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="250" y="1115" width="350" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="independent-text" value="Os serviços reagem ao evento &lt;b&gt;de forma totalmente independente e assíncrona&lt;/b&gt;:&lt;br&gt;• Não há orquestrador central coordenando as ações&lt;br&gt;• Cada serviço decide quando e como processar o evento&lt;br&gt;• Falha em um serviço não afeta os outros" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1140" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="choreography-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1320" width="710" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="choreography-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;COREOGRAFIA vs ORQUESTRAÇÃO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="225" y="1335" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="choreography-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1380" width="310" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="choreography-box-title" value="&lt;b&gt;✅ COREOGRAFIA (Este Diagrama)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#006400;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1380" width="270" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="choreography-desc" value="&lt;b&gt;Características:&lt;/b&gt;&lt;br&gt;• Sem coordenador central&lt;br&gt;• Serviços reagem a eventos de forma autônoma&lt;br&gt;• Baixo acoplamento entre serviços&lt;br&gt;• Cada serviço tem sua própria lógica&lt;br&gt;&lt;br&gt;&lt;b&gt;Vantagens:&lt;/b&gt;&lt;br&gt;+ Alta escalabilidade&lt;br&gt;+ Resiliência (falha isolada)&lt;br&gt;+ Flexibilidade para adicionar novos serviços&lt;br&gt;&lt;br&gt;&lt;b&gt;Desvantagens:&lt;/b&gt;&lt;br&gt;- Difícil rastrear fluxo completo&lt;br&gt;- Complexidade distribuída" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1405" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="orchestration-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="430" y="1380" width="320" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="orchestration-box-title" value="&lt;b&gt;⚙️ ORQUESTRAÇÃO (Alternativa)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#8B0000;" parent="1" vertex="1">
+          <mxGeometry x="450" y="1380" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="orchestration-desc" value="&lt;b&gt;Características:&lt;/b&gt;&lt;br&gt;• Orquestrador central controla o fluxo&lt;br&gt;• Serviços são chamados pelo orquestrador&lt;br&gt;• Alto acoplamento com coordenador&lt;br&gt;• Fluxo explícito e sequencial&lt;br&gt;&lt;br&gt;&lt;b&gt;Vantagens:&lt;/b&gt;&lt;br&gt;+ Fácil rastrear e debugar&lt;br&gt;+ Controle centralizado do fluxo&lt;br&gt;+ Transações distribuídas mais simples&lt;br&gt;&lt;br&gt;&lt;b&gt;Desvantagens:&lt;/b&gt;&lt;br&gt;- Ponto único de falha (orquestrador)&lt;br&gt;- Menor escalabilidade" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="1405" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="benefits-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1610" width="710" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="benefits-title" value="&lt;b&gt;BENEFÍCIOS DA ARQUITETURA EVENT-DRIVEN COM COREOGRAFIA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="150" y="1625" width="550" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="1665" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit1-text" value="&lt;b&gt;🔄 Desacoplamento Total&lt;/b&gt;&lt;br&gt;Serviços não conhecem uns aos outros, apenas reagem a eventos. Facilita manutenção e evolução independente." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1670" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="1665" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit2-text" value="&lt;b&gt;📈 Escalabilidade Horizontal&lt;/b&gt;&lt;br&gt;Cada serviço pode escalar independentemente conforme demanda, sem impactar outros componentes." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1670" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="1730" width="310" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit3-text" value="&lt;b&gt;🛡️ Resiliência a Falhas&lt;/b&gt;&lt;br&gt;Falha em um serviço não bloqueia outros. Sistema continua funcionando parcialmente mesmo com componentes indisponíveis." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1735" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="1730" width="320" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="benefit4-text" value="&lt;b&gt;🔌 Extensibilidade Simples&lt;/b&gt;&lt;br&gt;Novos serviços podem ser adicionados facilmente sem modificar código existente, apenas consumindo eventos." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1735" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1840" width="710" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;EXEMPLO DE FLUXO COMPLETO&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="250" y="1850" width="350" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-steps" value="&lt;b&gt;1.&lt;/b&gt; Cliente finaliza compra → Order Service publica &lt;b&gt;OrderReceived&lt;/b&gt;&lt;br&gt;&lt;b&gt;2.&lt;/b&gt; Payment Service consome evento → Processa pagamento → Publica &lt;b&gt;PaymentProcessed&lt;/b&gt;&lt;br&gt;&lt;b&gt;3.&lt;/b&gt; Inventory Service consome evento → Reserva estoque → Publica &lt;b&gt;InventoryReserved&lt;/b&gt;&lt;br&gt;&lt;b&gt;4.&lt;/b&gt; Shipping Service consome evento → Prepara envio → Publica &lt;b&gt;ShippingPrepared&lt;/b&gt;&lt;br&gt;&lt;b&gt;5.&lt;/b&gt; Notification Service consome &lt;b&gt;PaymentProcessed&lt;/b&gt; → Envia email de confirmação&lt;br&gt;&lt;b&gt;6.&lt;/b&gt; Analytics Service consome todos eventos → Atualiza dashboards e relatórios" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1876" width="640" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="💡 &lt;b&gt;NOTA:&lt;/b&gt; Em sistemas reais, implemente event sourcing, saga patterns e compensating transactions para garantir consistência eventual" style="text;html=1;strokeColor=#000000;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=2;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="100" y="2000" width="650" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

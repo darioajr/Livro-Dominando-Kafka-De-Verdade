@@ -1,0 +1,82 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Kafka Retention Policies" id="kafka-retention-policies">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Kafka Retention Policies&lt;/b&gt;&lt;br&gt;Examples of Different Topic Configurations" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="225" y="30" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="topic1-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="100" y="120" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="topic1-title" value="&lt;b&gt;Topic: financial-transactions&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="130" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic1-icon" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="130" y="170" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="topic1-details" value="&lt;b&gt;Retention Policy:&lt;/b&gt;&lt;br&gt;• Time: 7 years (2555 days)&lt;br&gt;• Size: 500 GB&lt;br&gt;• Reason: Legal/Regulatory Compliance&lt;br&gt;&lt;br&gt;&lt;b&gt;Cleanup Policy:&lt;/b&gt; delete&lt;br&gt;&lt;b&gt;Compression:&lt;/b&gt; lz4" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="240" y="170" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="topic2-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="100" y="330" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="topic2-title" value="&lt;b&gt;Topic: user-activity-logs&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="340" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic2-icon" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="130" y="380" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="topic2-details" value="&lt;b&gt;Retention Policy:&lt;/b&gt;&lt;br&gt;• Time: 30 days&lt;br&gt;• Size: 100 GB&lt;br&gt;• Reason: Short-term Analytics&lt;br&gt;&lt;br&gt;&lt;b&gt;Cleanup Policy:&lt;/b&gt; delete&lt;br&gt;&lt;b&gt;Compression:&lt;/b&gt; snappy" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="240" y="380" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="topic3-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="100" y="540" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="topic3-title" value="&lt;b&gt;Topic: realtime-events&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="550" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic3-icon" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="130" y="590" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="topic3-details" value="&lt;b&gt;Retention Policy:&lt;/b&gt;&lt;br&gt;• Time: 24 hours (1 day)&lt;br&gt;• Size: 10 GB&lt;br&gt;• Reason: Real-time Processing Only&lt;br&gt;&lt;br&gt;&lt;b&gt;Cleanup Policy:&lt;/b&gt; delete&lt;br&gt;&lt;b&gt;Compression:&lt;/b&gt; none" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="240" y="590" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="topic4-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="100" y="750" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="topic4-title" value="&lt;b&gt;Topic: audit-logs&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="760" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic4-icon" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="130" y="800" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="topic4-details" value="&lt;b&gt;Retention Policy:&lt;/b&gt;&lt;br&gt;• Time: Infinite (retention.ms=-1)&lt;br&gt;• Size: Unlimited&lt;br&gt;• Reason: Permanent Record&lt;br&gt;&lt;br&gt;&lt;b&gt;Cleanup Policy:&lt;/b&gt; compact&lt;br&gt;&lt;b&gt;Compression:&lt;/b&gt; gzip" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="240" y="800" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="topic5-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="100" y="960" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="topic5-title" value="&lt;b&gt;Topic: iot-sensor-data&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="970" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="topic5-icon" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1010" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="topic5-details" value="&lt;b&gt;Retention Policy:&lt;/b&gt;&lt;br&gt;• Time: 7 days&lt;br&gt;• Size: 50 GB&lt;br&gt;• Reason: Aggregation Window&lt;br&gt;&lt;br&gt;&lt;b&gt;Cleanup Policy:&lt;/b&gt; delete&lt;br&gt;&lt;b&gt;Compression:&lt;/b&gt; lz4" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="240" y="1010" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1170" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="&lt;b&gt;Legend &amp; Best Practices&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="120" y="1180" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-content" value="&lt;b&gt;Cleanup Policies:&lt;/b&gt;&lt;br&gt;• &lt;b&gt;delete&lt;/b&gt; - Removes old segments based on time or size&lt;br&gt;• &lt;b&gt;compact&lt;/b&gt; - Keeps only the latest value for each key&lt;br&gt;&lt;br&gt;&lt;b&gt;Configuration Parameters:&lt;/b&gt;&lt;br&gt;• retention.ms - Time-based retention in milliseconds&lt;br&gt;• retention.bytes - Size-based retention per partition&lt;br&gt;• compression.type - Compression algorithm (none, gzip, snappy, lz4, zstd)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1210" width="600" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

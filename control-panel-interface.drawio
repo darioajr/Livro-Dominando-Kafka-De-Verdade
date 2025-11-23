@@ -1,0 +1,216 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Control Panel Interface" id="control-panel-interface">
+    <mxGraphModel dx="984" dy="572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Painel de Controle - Observabilidade&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="225" y="40" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="metrics-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="100" width="650" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="metrics-title" value="&lt;b&gt;MÉTRICAS DO SISTEMA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="100" y="105" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-graph" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="150" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-label" value="&lt;b&gt;CPU Usage (%)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="120" y="150" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu-line" value="" style="shape=flexArrow;endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;fillColor=#000000;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0.3;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="240" as="sourcePoint" />
+            <mxPoint x="300" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="160" y="210" />
+              <mxPoint x="200" y="230" />
+              <mxPoint x="240" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cpu-line-path" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="240" as="sourcePoint" />
+            <mxPoint x="160" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cpu-line-path2" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="210" as="sourcePoint" />
+            <mxPoint x="200" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cpu-line-path3" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="230" as="sourcePoint" />
+            <mxPoint x="240" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cpu-line-path4" value="" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="200" as="sourcePoint" />
+            <mxPoint x="300" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="memory-graph" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="150" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="memory-label" value="&lt;b&gt;Memory Usage (%)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="330" y="150" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-bar1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="350" y="210" width="30" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-bar2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="395" y="195" width="30" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-bar3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="440" y="220" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-bar4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="485" y="185" width="30" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="throughput-graph" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="150" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="throughput-label" value="&lt;b&gt;Throughput (msg/s)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="540" y="150" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="throughput-area" value="" style="shape=flexArrow;endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#cccccc;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="250" as="sourcePoint" />
+            <mxPoint x="720" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="570" y="220" />
+              <mxPoint x="600" y="200" />
+              <mxPoint x="640" y="215" />
+              <mxPoint x="680" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="latency-p50" value="&lt;b&gt;P50:&lt;/b&gt; 45ms" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="120" y="280" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="latency-p95" value="&lt;b&gt;P95:&lt;/b&gt; 120ms" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="290" y="280" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="latency-p99" value="&lt;b&gt;P99:&lt;/b&gt; 250ms" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="460" y="280" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="error-rate" value="&lt;b&gt;Error Rate:&lt;/b&gt; 0.3%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="120" y="330" width="490" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="logs-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="410" width="650" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="logs-title" value="&lt;b&gt;LOGS RECENTES&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="100" y="415" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="log1" value="[ERROR] 2025-11-22 10:45:23 - Payment service timeout" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="120" y="455" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="log2" value="[WARN] 2025-11-22 10:45:20 - High memory usage detected" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="120" y="495" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="log3" value="[INFO] 2025-11-22 10:45:15 - Order processed successfully" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="120" y="535" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="log4" value="[INFO] 2025-11-22 10:45:10 - Consumer lag decreased to 50ms" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="120" y="575" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="log5" value="[DEBUG] 2025-11-22 10:45:05 - Partition rebalance completed" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="120" y="615" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="trace-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="100" y="700" width="650" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="trace-title" value="&lt;b&gt;MAPA DE RASTREAMENTO DISTRIBUÍDO&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="100" y="705" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="trace-timeline" value="&lt;b&gt;Request ID: 7a8b9c-def01&lt;/b&gt; | Duration: 245ms" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=11;fontColor=#ffffff;align=left;" parent="1" vertex="1">
+          <mxGeometry x="120" y="750" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="span-api" value="API Gateway" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;align=left;" parent="1" vertex="1">
+          <mxGeometry x="140" y="800" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="span-api-time" value="45ms" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="290" y="805" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="span-order" value="Order Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;align=left;" parent="1" vertex="1">
+          <mxGeometry x="180" y="860" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="span-order-time" value="120ms" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="410" y="865" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="span-payment" value="Payment Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=11;align=left;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="220" y="920" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="span-payment-time" value="80ms" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="490" y="925" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="span-notification" value="Notification Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=11;align=left;" parent="1" vertex="1">
+          <mxGeometry x="220" y="980" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="span-notification-time" value="35ms" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="410" y="985" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="span-api" target="span-order" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="900" as="sourcePoint" />
+            <mxPoint x="450" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="span-order" target="span-payment" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="900" as="sourcePoint" />
+            <mxPoint x="450" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;exitX=0.3;exitY=1;entryX=0.5;entryY=0;" parent="1" source="span-payment" target="span-notification" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="900" as="sourcePoint" />
+            <mxPoint x="450" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="interconnection-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=2;verticalAlign=top;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1060" width="650" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="interconnection-title" value="&lt;b&gt;CORRELAÇÃO E INSIGHTS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1065" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="correlation1" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;dashed=1;startArrow=classic;startFill=1;endFill=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="370" as="sourcePoint" />
+            <mxPoint x="200" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="correlation1-label" value="Correlação&#xa;temporal" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="210" y="380" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="correlation2" value="" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=2;dashed=1;startArrow=classic;startFill=1;endFill=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="670" as="sourcePoint" />
+            <mxPoint x="320" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="correlation2-label" value="Request ID&#xa;linking" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="330" y="670" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="insight1" value="⚠ Latência aumentou 15% após erro no Payment Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1110" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="insight2" value="✓ 95% das requisições completam em &lt; 250ms" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1110" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="insight3" value="⚡ Throughput atual: 1,245 msg/s | Pico: 2,100 msg/s" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1180" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="insight4" value="🔍 3 serviços afetados pelo timeout identificado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=1;fontSize=10;align=left;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1180" width="290" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
